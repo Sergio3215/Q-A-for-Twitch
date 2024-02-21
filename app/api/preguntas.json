@@ -1,0 +1,375 @@
+[
+    {
+      "pregunta": "¿Cuál es la capital de Francia?",
+      "respuesta": "París"
+    },
+    {
+      "pregunta": "¿Cuál es el río más largo del mundo?",
+      "respuesta": "El Nilo"
+    },
+    {
+      "pregunta": "¿Cuál es la montaña más alta del mundo?",
+      "respuesta": "El Monte Everest"
+    },
+    {
+      "pregunta": "¿Cuál es el país más poblado del mundo?",
+      "respuesta": "China"
+    },
+    {
+      "pregunta": "¿Cuál es el país más pequeño del mundo?",
+      "respuesta": "Vaticano"
+    },
+    {
+      "pregunta": "¿Cuál es el océano más grande del mundo?",
+      "respuesta": "El Océano Pacífico"
+    },
+    {
+      "pregunta": "¿Cuál es el desierto más grande del mundo?",
+      "respuesta": "El Sahara"
+    },
+    {
+      "pregunta": "¿Cuál es el bosque más grande del mundo?",
+      "respuesta": "La Amazonía"
+    },
+    {
+      "pregunta": "¿Cuál es el animal más grande del mundo?",
+      "respuesta": "La ballena azul"
+    },
+    {
+      "pregunta": "¿Cuál es el animal más pequeño del mundo?",
+      "respuesta": "La musaraña enana"
+    },
+    {
+      "pregunta": "¿Cuál es el planeta más grande del Sistema Solar?",
+      "respuesta": "Júpiter"
+    },
+    {
+      "pregunta": "¿Cuál es el planeta más pequeño del Sistema Solar?",
+      "respuesta": "Mercurio"
+    },
+    {
+      "pregunta": "¿Cuál es la estrella más brillante del cielo nocturno?",
+      "respuesta": "Sirio"
+    },
+    {
+      "pregunta": "¿Cuál es la constelación más grande del cielo nocturno?",
+      "respuesta": "Hydra"
+    },
+    {
+      "pregunta": "¿Cuál es la constelación más pequeña del cielo nocturno?",
+      "respuesta": "Crux"
+    },
+    {
+      "pregunta": "¿Cuál es el número pi?",
+      "respuesta": "3,1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679"
+    },
+    {
+      "pregunta": "¿Cuál es la velocidad de la luz?",
+      "respuesta": "299.792.458 metros por segundo"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula de la fuerza de gravedad?",
+      "respuesta": "F = G * m1 * m2 / r^2"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula de la energía cinética?",
+      "respuesta": "Ec = 1/2 * m * v^2"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula de la energía potencial gravitatoria?",
+      "respuesta": "Ep = mgh"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula de la energía potencial elástica?",
+      "respuesta": "Ep = 1/2 * k * x^2"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula de la ley de Ohm?",
+      "respuesta": "V = I * R"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula de la ley de Faraday?",
+      "respuesta": "E = -dФ/dt"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula de la ley de Kirchhoff?",
+      "respuesta":
+        "∑ I = 0\n∑ V = 0"
+   },
+    {
+      "pregunta": "¿Cuál es el nombre del elemento químico más pesado?",
+      "respuesta": "Oganesson"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del agua?",
+      "respuesta": "H2O"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del dióxido de carbono?",
+      "respuesta": "CO2"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del ácido clorhídrico?",
+      "respuesta": "HCl"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del ácido sulfúrico?",
+      "respuesta": "H2SO4"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del ácido nítrico?",
+      "respuesta": "HNO3"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del amoníaco?",
+      "respuesta": "NH3"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del etanol?",
+      "respuesta": "C2H5OH"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del azúcar?",
+      "respuesta": "C12H22O11"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química de la sal?",
+      "respuesta": "NaCl"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del hierro?",
+      "respuesta": "Fe"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del oro?",
+      "respuesta": "Au"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química de la plata?",
+      "respuesta": "Ag"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del cobre?",
+      "respuesta": "Cu"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del mercurio?",
+      "respuesta": "Hg"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del carbono?",
+      "respuesta": "C"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del hidrógeno?",
+      "respuesta": "H"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del oxígeno?",
+      "respuesta": "O"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del nitrógeno?",
+      "respuesta": "N"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del azufre?",
+      "respuesta": "S"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del cloro?",
+      "respuesta": "Cl"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del flúor?",
+      "respuesta": "F"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del sodio?",
+      "respuesta": "Na"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del potasio?",
+      "respuesta": "K"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del calcio?",
+      "respuesta": "Ca"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del magnesio?",
+      "respuesta": "Mg"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del hierro?",
+      "respuesta": "Fe"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del cobre?",
+      "respuesta": "Cu"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del zinc?",
+      "respuesta": "Zn"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del níquel?"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del níquel?",
+      "respuesta": "Ni"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del cobalto?",
+      "respuesta": "Co"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del manganeso?",
+      "respuesta": "Mn"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del cromo?",
+      "respuesta": "Cr"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del molibdeno?",
+      "respuesta": "Mo"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del tungsteno?",
+      "respuesta": "W"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del selenio?",
+      "respuesta": "Se"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del yodo?",
+      "respuesta": "I"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del boro?",
+      "respuesta": "B"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del silicio?",
+      "respuesta": "Si"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del fósforo?",
+      "respuesta": "P"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del azufre?",
+      "respuesta": "S"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del cloro?",
+      "respuesta": "Cl"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del flúor?",
+      "respuesta": "F"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del litio?",
+      "respuesta": "Li"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del sodio?",
+      "respuesta": "Na"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del potasio?",
+      "respuesta": "K"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del rubidio?",
+      "respuesta": "Rb"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del cesio?",
+      "respuesta": "Cs"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del francio?",
+      "respuesta": "Fr"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del berilio?",
+      "respuesta": "Be"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del magnesio?",
+      "respuesta": "Mg"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del calcio?",
+      "respuesta": "Ca"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del estroncio?",
+      "respuesta": "Sr"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del bario?",
+      "respuesta": "Ba"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del radio?",
+      "respuesta": "Ra"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del boro?",
+      "respuesta": "B"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del aluminio?",
+      "respuesta": "Al"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del galio?",
+      "respuesta": "Ga"
+    },
+    {
+      "pregunta": "¿Cuál es la fórmula química del indio?",
+      "respuesta": "In"
+    },
+    {
+      "pregunta": "¿En qué año se descubrió América?",
+      "respuesta": "1492."
+    },
+    {
+      "pregunta": "¿Cuál es la capital de Australia?",
+      "respuesta": "Camberra."
+    },
+    {
+      "pregunta": "¿Quién escribió 'Romeo y Julieta'?",
+      "respuesta": "William Shakespeare."
+    },
+    {
+      "pregunta": "¿Cuál es el elemento más abundante en la corteza terrestre?",
+      "respuesta": "Oxígeno."
+    },
+    {
+      "pregunta": "¿En qué año se celebró la primera Copa Mundial de la FIFA?",
+      "respuesta": "1930."
+    },
+    {
+      "pregunta": "¿Quién pintó la 'Mona Lisa'?",
+      "respuesta": "Leonardo da Vinci."
+    },
+    {
+      "id": 8,
+      "pregunta": "¿Cuál es el océano más grande del mundo?",
+      "respuesta": "Océano Pacífico."
+    },
+    {
+      "pregunta": "¿Quién fue el primer presidente de Estados Unidos?",
+      "respuesta": "George Washington."
+    },
+    {
+      "pregunta": "¿Qué planeta es conocido como el 'Planeta Rojo'?",
+      "respuesta": "Marte."
+    }
+  ]
