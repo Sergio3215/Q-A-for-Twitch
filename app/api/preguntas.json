@@ -1,375 +1,283 @@
 [
-    {
-      "pregunta": "¿Cuál es la capital de Francia?",
-      "respuesta": "París"
-    },
-    {
-      "pregunta": "¿Cuál es el río más largo del mundo?",
-      "respuesta": "El Nilo"
-    },
-    {
-      "pregunta": "¿Cuál es la montaña más alta del mundo?",
-      "respuesta": "El Monte Everest"
-    },
-    {
-      "pregunta": "¿Cuál es el país más poblado del mundo?",
-      "respuesta": "China"
-    },
-    {
-      "pregunta": "¿Cuál es el país más pequeño del mundo?",
-      "respuesta": "Vaticano"
-    },
-    {
-      "pregunta": "¿Cuál es el océano más grande del mundo?",
-      "respuesta": "El Océano Pacífico"
-    },
-    {
-      "pregunta": "¿Cuál es el desierto más grande del mundo?",
-      "respuesta": "El Sahara"
-    },
-    {
-      "pregunta": "¿Cuál es el bosque más grande del mundo?",
-      "respuesta": "La Amazonía"
-    },
-    {
-      "pregunta": "¿Cuál es el animal más grande del mundo?",
-      "respuesta": "La ballena azul"
-    },
-    {
-      "pregunta": "¿Cuál es el animal más pequeño del mundo?",
-      "respuesta": "La musaraña enana"
-    },
-    {
-      "pregunta": "¿Cuál es el planeta más grande del Sistema Solar?",
-      "respuesta": "Júpiter"
-    },
-    {
-      "pregunta": "¿Cuál es el planeta más pequeño del Sistema Solar?",
-      "respuesta": "Mercurio"
-    },
-    {
-      "pregunta": "¿Cuál es la estrella más brillante del cielo nocturno?",
-      "respuesta": "Sirio"
-    },
-    {
-      "pregunta": "¿Cuál es la constelación más grande del cielo nocturno?",
-      "respuesta": "Hydra"
-    },
-    {
-      "pregunta": "¿Cuál es la constelación más pequeña del cielo nocturno?",
-      "respuesta": "Crux"
-    },
-    {
-      "pregunta": "¿Cuál es el número pi?",
-      "respuesta": "3,1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679"
-    },
-    {
-      "pregunta": "¿Cuál es la velocidad de la luz?",
-      "respuesta": "299.792.458 metros por segundo"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula de la fuerza de gravedad?",
-      "respuesta": "F = G * m1 * m2 / r^2"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula de la energía cinética?",
-      "respuesta": "Ec = 1/2 * m * v^2"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula de la energía potencial gravitatoria?",
-      "respuesta": "Ep = mgh"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula de la energía potencial elástica?",
-      "respuesta": "Ep = 1/2 * k * x^2"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula de la ley de Ohm?",
-      "respuesta": "V = I * R"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula de la ley de Faraday?",
-      "respuesta": "E = -dФ/dt"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula de la ley de Kirchhoff?",
-      "respuesta":
-        "∑ I = 0\n∑ V = 0"
-   },
-    {
-      "pregunta": "¿Cuál es el nombre del elemento químico más pesado?",
-      "respuesta": "Oganesson"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del agua?",
-      "respuesta": "H2O"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del dióxido de carbono?",
-      "respuesta": "CO2"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del ácido clorhídrico?",
-      "respuesta": "HCl"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del ácido sulfúrico?",
-      "respuesta": "H2SO4"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del ácido nítrico?",
-      "respuesta": "HNO3"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del amoníaco?",
-      "respuesta": "NH3"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del etanol?",
-      "respuesta": "C2H5OH"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del azúcar?",
-      "respuesta": "C12H22O11"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química de la sal?",
-      "respuesta": "NaCl"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del hierro?",
-      "respuesta": "Fe"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del oro?",
-      "respuesta": "Au"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química de la plata?",
-      "respuesta": "Ag"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del cobre?",
-      "respuesta": "Cu"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del mercurio?",
-      "respuesta": "Hg"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del carbono?",
-      "respuesta": "C"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del hidrógeno?",
-      "respuesta": "H"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del oxígeno?",
-      "respuesta": "O"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del nitrógeno?",
-      "respuesta": "N"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del azufre?",
-      "respuesta": "S"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del cloro?",
-      "respuesta": "Cl"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del flúor?",
-      "respuesta": "F"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del sodio?",
-      "respuesta": "Na"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del potasio?",
-      "respuesta": "K"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del calcio?",
-      "respuesta": "Ca"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del magnesio?",
-      "respuesta": "Mg"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del hierro?",
-      "respuesta": "Fe"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del cobre?",
-      "respuesta": "Cu"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del zinc?",
-      "respuesta": "Zn"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del níquel?"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del níquel?",
-      "respuesta": "Ni"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del cobalto?",
-      "respuesta": "Co"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del manganeso?",
-      "respuesta": "Mn"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del cromo?",
-      "respuesta": "Cr"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del molibdeno?",
-      "respuesta": "Mo"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del tungsteno?",
-      "respuesta": "W"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del selenio?",
-      "respuesta": "Se"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del yodo?",
-      "respuesta": "I"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del boro?",
-      "respuesta": "B"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del silicio?",
-      "respuesta": "Si"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del fósforo?",
-      "respuesta": "P"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del azufre?",
-      "respuesta": "S"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del cloro?",
-      "respuesta": "Cl"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del flúor?",
-      "respuesta": "F"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del litio?",
-      "respuesta": "Li"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del sodio?",
-      "respuesta": "Na"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del potasio?",
-      "respuesta": "K"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del rubidio?",
-      "respuesta": "Rb"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del cesio?",
-      "respuesta": "Cs"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del francio?",
-      "respuesta": "Fr"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del berilio?",
-      "respuesta": "Be"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del magnesio?",
-      "respuesta": "Mg"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del calcio?",
-      "respuesta": "Ca"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del estroncio?",
-      "respuesta": "Sr"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del bario?",
-      "respuesta": "Ba"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del radio?",
-      "respuesta": "Ra"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del boro?",
-      "respuesta": "B"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del aluminio?",
-      "respuesta": "Al"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del galio?",
-      "respuesta": "Ga"
-    },
-    {
-      "pregunta": "¿Cuál es la fórmula química del indio?",
-      "respuesta": "In"
-    },
-    {
-      "pregunta": "¿En qué año se descubrió América?",
-      "respuesta": "1492."
-    },
-    {
-      "pregunta": "¿Cuál es la capital de Australia?",
-      "respuesta": "Camberra."
-    },
-    {
-      "pregunta": "¿Quién escribió 'Romeo y Julieta'?",
-      "respuesta": "William Shakespeare."
-    },
-    {
-      "pregunta": "¿Cuál es el elemento más abundante en la corteza terrestre?",
-      "respuesta": "Oxígeno."
-    },
-    {
-      "pregunta": "¿En qué año se celebró la primera Copa Mundial de la FIFA?",
-      "respuesta": "1930."
-    },
-    {
-      "pregunta": "¿Quién pintó la 'Mona Lisa'?",
-      "respuesta": "Leonardo da Vinci."
-    },
-    {
-      "id": 8,
-      "pregunta": "¿Cuál es el océano más grande del mundo?",
-      "respuesta": "Océano Pacífico."
-    },
-    {
-      "pregunta": "¿Quién fue el primer presidente de Estados Unidos?",
-      "respuesta": "George Washington."
-    },
-    {
-      "pregunta": "¿Qué planeta es conocido como el 'Planeta Rojo'?",
-      "respuesta": "Marte."
-    }
-  ]
+  {
+    "pregunta": "¿Cuál es la capital de Francia?",
+    "respuesta": "París"
+  },
+  {
+    "pregunta": "¿Cuál es el río más largo del mundo?",
+    "respuesta": "El Nilo"
+  },
+  {
+    "pregunta": "¿Cuál es la montaña más alta del mundo?",
+    "respuesta": "El Monte Everest"
+  },
+  {
+    "pregunta": "¿Cuál es el país más poblado del mundo?",
+    "respuesta": "China"
+  },
+  {
+    "pregunta": "¿Cuál es el país más pequeño del mundo?",
+    "respuesta": "Vaticano"
+  },
+  {
+    "pregunta": "¿Cuál es el océano más grande del mundo?",
+    "respuesta": "El Océano Pacífico"
+  },
+  {
+    "pregunta": "¿Cuál es el desierto más grande del mundo?",
+    "respuesta": "El Sahara"
+  },
+  {
+    "pregunta": "¿Cuál es el bosque más grande del mundo?",
+    "respuesta": "La Amazonía"
+  },
+  {
+    "pregunta": "¿Cuál es el animal más grande del mundo?",
+    "respuesta": "La ballena azul"
+  },
+  {
+    "pregunta": "¿Cuál es el animal más pequeño del mundo?",
+    "respuesta": "La musaraña enana"
+  },
+  {
+    "pregunta": "¿Cuál es el planeta más grande del Sistema Solar?",
+    "respuesta": "Júpiter"
+  },
+  {
+    "pregunta": "¿Cuál es el planeta más pequeño del Sistema Solar?",
+    "respuesta": "Mercurio"
+  },
+  {
+    "pregunta": "¿Cuál es el número pi?",
+    "respuesta": "3,1416"
+  },
+  {
+    "pregunta": "¿Cuál es la fórmula química del potasio?",
+    "respuesta": "K"
+  },
+  {
+    "pregunta": "¿Cuál es la fórmula química del magnesio?",
+    "respuesta": "Mg"
+  },
+  {
+    "pregunta": "¿Cuál es la fórmula química del calcio?",
+    "respuesta": "Ca"
+  },
+  {
+    "pregunta": "¿Cuál es la fórmula química del radio?",
+    "respuesta": "Ra"
+  },
+  {
+    "pregunta": "¿En qué año se descubrió América?",
+    "respuesta": "1492."
+  },
+  {
+    "pregunta": "¿Cuál es la capital de Australia?",
+    "respuesta": "Camberra."
+  },
+  {
+    "pregunta": "¿Quién escribió 'Romeo y Julieta'?",
+    "respuesta": "William Shakespeare."
+  },
+  {
+    "pregunta": "¿Cuál es el elemento más abundante en la corteza terrestre?",
+    "respuesta": "Oxígeno."
+  },
+  {
+    "pregunta": "¿En qué año se celebró la primera Copa Mundial de la FIFA?",
+    "respuesta": "1930."
+  },
+  {
+    "pregunta": "¿Quién pintó la 'Mona Lisa'?",
+    "respuesta": "Leonardo da Vinci."
+  },
+  {
+    "pregunta": "¿Cuál es el océano más grande del mundo?",
+    "respuesta": "Océano Pacífico."
+  },
+  {
+    "pregunta": "¿Quién fue el primer presidente de Estados Unidos?",
+    "respuesta": "George Washington."
+  },
+  {
+    "pregunta": "¿Qué planeta es conocido como el 'Planeta Rojo'?",
+    "respuesta": "Marte."
+  },
+  {
+    "pregunta": "¿Quién fue el primer presidente de Estados Unidos?",
+    "respuesta": "George Washington"
+  },
+  {
+    "pregunta": "¿En qué año comenzó la Primera Guerra Mundial?",
+    "respuesta": "1914"
+  },
+  {
+    "pregunta": "¿Cuál fue la capital del Imperio Romano?",
+    "respuesta": "Roma"
+  },
+  {
+    "pregunta": "¿Quién fue el líder de la Revolución Rusa de 1917?",
+    "respuesta": "Vladimir Lenin"
+  },
+  {
+    "pregunta": "¿Qué evento marcó el inicio de la Revolución Francesa?",
+    "respuesta": "La Toma de la Bastilla"
+  },
+  {
+    "pregunta": "¿Cuál era el nombre del barco en el que Cristóbal Colón llegó a América en 1492?",
+    "respuesta": "La Santa María"
+  },
+  {
+    "pregunta": "¿En qué año terminó la Segunda Guerra Mundial?",
+    "respuesta": "1945"
+  },
+  {
+    "pregunta": "¿Quién fue el líder de la independencia de la India en 1947?",
+    "respuesta": "Mahatma Gandhi"
+  },
+  {
+    "pregunta": "¿Qué imperio gobernó gran parte de Europa durante la Edad Media?",
+    "respuesta": "El Imperio Carolingio"
+  },
+  {
+    "pregunta": "¿Cuál fue la capital del Imperio Inca?",
+    "respuesta": "Cuzco"
+  },
+  {
+    "pregunta": "¿Qué significa la sigla RGB en diseño?",
+    "respuesta": "Rojo, Verde y Azul"
+  },
+  {
+    "pregunta": "¿Cuál es el principio básico de la teoría del color?",
+    "respuesta": "La combinación de colores primarios para crear otros colores"
+  },
+  {
+    "pregunta": "¿Qué es la tipografía?",
+    "respuesta": "El arte y técnica en la letra"
+  },
+  {
+    "pregunta": "¿Qué es el diseño UX?",
+    "respuesta": "Experiencia de usuario"
+  },
+  {
+    "pregunta": "¿Cuál es el propósito del diseño de empaques?",
+    "respuesta": "Proteger, contener y promocionar productos"
+  },
+  {
+    "pregunta": "¿Qué es el diseño industrial?",
+    "respuesta": "El diseño de productos que se fabrican en serie"
+  },
+  {
+    "pregunta": "¿Cuál es el deporte más popular del mundo?",
+    "respuesta": "Fútbol"
+  },
+  {
+    "pregunta": "¿En qué país se originó el fútbol moderno?",
+    "respuesta": "Inglaterra"
+  },
+  {
+    "pregunta": "¿Cuántos jugadores conforman un equipo de fútbol en el campo?",
+    "respuesta": "11 jugadores"
+  },
+  {
+    "pregunta": "¿Qué trofeo se otorga al campeón del Mundial de Fútbol?",
+    "respuesta": "La Copa del Mundo de la FIFA"
+  },
+  {
+    "pregunta": "¿Qué jugador ha ganado más veces el premio Balón de Oro?",
+    "respuesta": "Lionel Messi"
+  },
+  {
+    "pregunta": "¿Qué equipo ganó la primera Copa Mundial de la FIFA en 1930?",
+    "respuesta": "Uruguay"
+  },
+  {
+    "pregunta": "¿Qué equipo español es conocido como 'el equipo blanco'?",
+    "respuesta": "Real Madrid"
+  },
+  {
+    "pregunta": "¿Quién es el máximo goleador de la historia de la Liga de Campeones de la UEFA?",
+    "respuesta": "Cristiano Ronaldo"
+  },
+  {
+    "pregunta": "¿Qué jugador es conocido como 'el Rey Pelé'?",
+    "respuesta": "Pelé, el legendario jugador brasileño"
+  },
+  {
+    "pregunta": "¿Qué país ganó la Copa Mundial de la FIFA 2018?",
+    "respuesta": "Francia"
+  },
+  {
+    "pregunta": "¿Qué utensilio se utiliza para revolver alimentos en una sartén?",
+    "respuesta": "La espátula"
+  },
+  {
+    "pregunta": "¿Qué técnica de cocción se utiliza para cocinar alimentos en agua hirviendo?",
+    "respuesta": "Hervir"
+  },
+  {
+    "pregunta": "¿Cómo se llama el proceso de cocinar alimentos a fuego lento y a temperatura baja durante un largo periodo de tiempo?",
+    "respuesta": "Cocción lenta"
+  },
+  {
+    "pregunta": "¿Qué utensilio se utiliza para medir ingredientes líquidos?",
+    "respuesta": "Jarra medidora"
+  },
+  {
+    "pregunta": "¿Qué se utiliza para dar sabor a los alimentos en la cocina?",
+    "respuesta": "Condimentos y especias"
+  },
+  {
+    "pregunta": "¿Qué tipo de corte se utiliza para cortar en rodajas muy finas?",
+    "respuesta": "Corte en láminas"
+  },
+  {
+    "pregunta": "¿Qué ingrediente se utiliza para hacer pan?",
+    "respuesta": "Harina, levadura, agua, azucar y sal"
+  },
+  {
+    "pregunta": "¿Cuál es el plato típico italiano que se hace con capas de pasta, carne y salsa de tomate?",
+    "respuesta": "Lasaña"
+  },
+  
+  {
+    "pregunta": "¿Qué significa la sigla 'RPM'?",
+    "respuesta": "Revoluciones Por Minuto"
+  },
+  {
+    "pregunta": "¿Qué componente del automóvil se encarga de la ignición de la mezcla aire-combustible?",
+    "respuesta": "La bujía"
+  },
+  {
+    "pregunta": "¿Qué sistema del automóvil es responsable de la suspensión y amortiguación?",
+    "respuesta": "El sistema de suspensión"
+  },
+  {
+    "pregunta": "¿Cuál es la función del radiador?",
+    "respuesta": "disipar el calor "
+  },
+  {
+    "pregunta": "¿Qué líquido se utiliza comúnmente en el sistema de frenos en un automóvil?",
+    "respuesta": "Líquido de frenos"
+  },
+  {
+    "pregunta": "¿Qué nombre recibe el componente que se encarga de distribuir la mezcla aire-combustible?",
+    "respuesta": "El carburador o inyector"
+  },
+  {
+    "pregunta": "¿Qué sistema del automóvil se encarga de convertir la energía mecánica del motor en energía cinética?",
+    "respuesta": "El sistema de transmisión"
+  },
+  {
+    "pregunta": "¿Qué función tiene el alternador en un automóvil?",
+    "respuesta": "Cargar la batería y suministrar energía eléctrica al sistema del vehículo"
+  },
+  {
+    "pregunta": "¿Cuál es la unidad de medida de la potencia de un motor?",
+    "respuesta": "El caballo de fuerza (HP)"
+  },
+  {
+    "pregunta": "¿Qué parte del automóvil es responsable de filtrar el polvo que ingresa al motor?",
+    "respuesta": "El filtro de aire"
+  }
+]
