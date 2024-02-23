@@ -4,6 +4,8 @@ import Logg from '../Components/logg';
 import Background from '../Components/background';
 import StartText from '../Components/starText';
 import Question from '../Components/question';
+import {btnStart, containerDiv} from './page.module.css'
+
 const Tmi = require("tmi.js");
 
 const client = new Tmi.Client({
@@ -37,7 +39,6 @@ export default function Home() {
   const [rta, setRta] = useState([]);
   const [load, setLoad] = useState([]);
   const [logg, setLogg] = useState([]);
-  const [color, setColor] = useState('');
   const [image, setImage] = useState('');
   const [start, setStart] = useState(false);
   const [win, setWin] = useState(false);
@@ -56,9 +57,6 @@ export default function Home() {
     getQuestion();
     client.connect().catch((err) => { console.log(err.message) });
     setInnerHeight(window.innerHeight + "px");
-
-    setImage(`url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"`);
-    setColor("#515760");
 
     if(localStorage.getItem("user") != null){
       let usrt1 = JSON.parse(localStorage.getItem("user")).data;
@@ -185,28 +183,12 @@ export default function Home() {
 
   return (
     <>
-      <Background color={color} image={image}>
+      <Background start={start}>
         {
           (!start) ?
-            <div style={{
-              position: 'absolute',
-              bottom: '40%',
-              left: '43.5%',
-            }}>
-              <button style={{
-                borderLeft: '4px solid #3F7244',
-                borderRight: '15px solid #3F7244',
-                borderTop: '10px solid #3F7244',
-                borderBottom: '10px solid #3F7244',
-                borderRadius: '50px',
-                backgroundColor: "#6BC174",
-                width: '494px',
-                height: '200px',
-                cursor: 'pointer'
-              }} onClick={() => {
+            <div className={containerDiv}>
+              <button className={btnStart} onClick={() => {
                 setStart(true);
-                setColor('#5C77BD');
-                setImage('');
               }}>
                 <StartText />
               </button>

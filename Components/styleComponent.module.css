@@ -1,0 +1,61 @@
+.imgBackgroundContainer {
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-color: #515760;
+    background-size: 76px;
+}
+
+.colorBackgroundContainer {
+    width: 100%;
+    height: 100%;
+    background-color: #5C77BD;
+}
+
+.leterLogger {
+    color: #F3FBC1;
+    text-shadow: 1px 1px 1px black;
+    padding: 20px 15px 20px 15px;
+}
+
+.containerLogger {
+    max-width: 248px;
+    background-color: rgba(0, 0, 0, 13%);
+}
+
+.questionHeader {
+    position: absolute;
+    bottom: 34%;
+    left: 44%;
+    width: 451px;
+    height: 344px;
+    background-color: #FFE3BA;
+    border-radius: 17px;
+    text-align: center;
+    font-family: Inter;
+}
+
+.questionHeaderLetter {
+    background-color: #461485;
+    width: 451px;
+    height: 83px;
+    border-top-right-radius: 17px;
+    border-top-left-radius: 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    font-size: 36px;
+}
+
+.questionBody {
+    background-color: #FFE3BA;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #55452E;
+    text-shadow: 1px 1px 1px black;
+    font-size: 36px;
+    margin-top: 22%;
+}

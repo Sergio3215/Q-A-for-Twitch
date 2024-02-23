@@ -1,23 +1,16 @@
-export default function Background({ color, image, children }) {
+import {imgBackgroundContainer, colorBackgroundContainer} from './styleComponent.module.css';
+
+export default function Background({ start, children }) {
     return (
         <>
             {
-                (image != '' && image != undefined) ?
+                (!start) ?
 
-                    <div style={{
-                        backgroundImage: image,
-                        backgroundColor: color,
-                        width: "100%",
-                        height: "100%",
-                    }}>
+                    <div className={imgBackgroundContainer}>
                         {children}
                     </div>
                     :
-                    <div style={{
-                        backgroundColor: color,
-                        width: "100%",
-                        height: "100%",
-                    }}>
+                    <div className={colorBackgroundContainer}>
                         {children}
                     </div>
             }
