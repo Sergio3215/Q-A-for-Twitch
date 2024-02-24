@@ -4,12 +4,27 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     background-color: #515760;
     background-size: 76px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
 }
 
 .colorBackgroundContainer {
     width: 100%;
     height: 100%;
     background-color: #5C77BD;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.QuestionContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .leterLogger {
@@ -22,27 +37,30 @@
 .containerLogger {
     max-width: 248px;
     background-color: rgba(0, 0, 0, 13%);
+    max-width: 16vw;
+    min-width: 16vw;
+    max-height: 100vh;
+    min-height: 100vh;
 }
 
 .timer {
-    position: absolute;
+    /* position: absolute; */
     left: 53%;
     font-size: 128px;
-    color:#FCEDBA;
+    color: #FCEDBA;
     text-shadow: 1px 1px 12px black;
 }
 
 .questionHeader {
-    position: absolute;
-    bottom: 45%;
-    left: 44%;
+    position: relative;
+    bottom: 16%;
     width: 451px;
     height: 344px;
     background-color: #FFE3BA;
     border-radius: 17px;
     text-align: center;
     font-family: Inter;
-    box-shadow: 1px 1px 60px 2px rgba(0,0,0,5%);
+    box-shadow: 1px 1px 60px 2px rgba(0, 0, 0, 5%);
 }
 
 .questionHeaderLetter {
@@ -90,40 +108,47 @@
 .btnCustomContainers {
     position: absolute;
     right: 0;
+    z-index: 999;
 }
 
-.AnswerBoxLeft{
-    position: absolute;
-    left:30%;
+.AnswerBoxLeft {
+    /* position: absolute; */
+    left: 30%;
 }
 
-.AnswerBoxRight{
-    position: absolute;
-    right:19%;
+.AnswerBoxRight {
+    /* position: absolute; */
+    right: 19%;
 }
-.AnswerBoxRight , .AnswerBoxLeft{
+
+.AnswerBoxRight,
+.AnswerBoxLeft {
     width: 451px;
     height: 98px;
     background-color: #D9D9D9;
     border-radius: 17px;
-    color:black;
+    color: black;
     font-size: 20px;
     display: flex;
     justify-content: left;
     align-items: left;
-    box-shadow: 1px 1px 60px 2px rgba(0,0,0,14%);
-    bottom:25%;
+    box-shadow: 1px 1px 60px 2px rgba(0, 0, 0, 14%);
+    bottom: 25%;
 }
-.AnswerBoxRight label:last-child , .AnswerBoxLeft label:last-child{
-    position: relative;
+
+.AnswerBoxRight label:last-child,
+.AnswerBoxLeft label:last-child {
+    /* position: relative; */
     left: 5px;
-    top:25px;
+    top: 25px;
     font-size: 18.5px;
 }
-.AnswerBoxRight label:first-child , .AnswerBoxLeft label:first-child{
+
+.AnswerBoxRight label:first-child,
+.AnswerBoxLeft label:first-child {
     position: relative;
-    bottom: 10px;
-    right:12px;
+    bottom: 12px;
+    right: 12px;
     border: 1px solid #D9D9D9;
     background-color: #D9D9D9;
     width: 110px;
@@ -133,5 +158,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 1px 1px 60px 2px rgba(0,0,0,14%);
+    box-shadow: 1px 1px 60px 2px rgba(0, 0, 0, 14%);
+}
+
+.UserBoxLeft {
+    display: flex;
+    flex-direction: column;
+}
+
+.UserBoxRight {
+    display: flex;
+    flex-direction: column;
+}
+
+.UserBoxFont{
+   padding-top: 25px;
+}
+
+.AnswerContaintReply{
+    display: flex;
+    position: relative;
+    bottom: 241px;
+    gap:42px;
 }

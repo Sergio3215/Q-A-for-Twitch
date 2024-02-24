@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-import { AnswerBoxLeft, AnswerBoxRight } from './styleComponent.module.css'
+import { AnswerBoxLeft, AnswerBoxRight, UserBoxLeft, UserBoxRight, AnswerContaintReply, UserBoxFont } from './styleComponent.module.css'
 
-export default function Answer({ stage, correct, incorrect, count, rta, setLoggable, userReply}) {
+export default function Answer({ stage, correct, incorrect, count, rta, setLoggable, userReply, cleanLogManager }) {
 
 
     // console.log(userReply)
@@ -16,22 +16,52 @@ export default function Answer({ stage, correct, incorrect, count, rta, setLogga
     const [replyUser2, setReplyUser2] = useState([]);
 
 
-    const reply = ()=>{
-        if(rta.includes("1")) {
+    const reply = () => {
+
+        if (replyUser1.length > 0) {
+            if (replyUser1.filter(user => user == userReply).length > 0) {
+                let arr = [];
+                replyUser1.map(user => {
+                    if (user != userReply) {
+                        arr.push(user);
+                    }
+                });
+                setReplyUser1(arr);
+            }
+        }
+
+
+        if (replyUser2.length > 0) {
+            if (replyUser2.filter(user => user == userReply).length > 0) {
+                let arr = [];
+                replyUser2.map(user => {
+                    if (user != userReply) {
+                        arr.push(user);
+                    }
+                });
+                setReplyUser2(arr);
+            }
+        }
+
+        if (rta.includes("1")) {
             let arrReplyUsers = replyUser1;
             arrReplyUsers.push(userReply);
             setReplyUser1(arrReplyUsers);
         }
-        else if(rta.includes("2")) {
+        else if (rta.includes("2")) {
             let arrReplyUsers = replyUser2;
             arrReplyUsers.push(userReply);
             setReplyUser2(arrReplyUsers);
         }
-        else{
+        else {
             setLoggable("La respuesta no coincide con las opciones 1 y 2");
+            cleanLogManager();
         }
-                
     }
+
+    useEffect(() => {
+        reply();
+    }, [rta])
 
     useEffect(() => {
         let randomNumber = Math.floor(Math.random() * 2);
@@ -53,7 +83,7 @@ export default function Answer({ stage, correct, incorrect, count, rta, setLogga
             setId2("correct");
         }
 
-    }, [stage, correct, incorrect]);
+    }, [stage, correct, incorrect, userReply]);
 
     useEffect(() => {
         if (count == 1) {
@@ -81,23 +111,37 @@ export default function Answer({ stage, correct, incorrect, count, rta, setLogga
 
 
     return (
-        <>
-            <div className={AnswerBoxLeft} id={id1}>
-                <label>
-                    1
-                </label>
-                <label>
-                    {ans1}
-                </label>
+        <div className={AnswerContaintReply}>
+            <div className={UserBoxLeft}>
+                <div className={AnswerBoxLeft} id={id1}>
+                    <label>
+                        1
+                    </label>
+                    <label>
+                        {ans1}
+                    </label>
+                </div>
+                <div className={UserBoxFont}>
+                    {replyUser1.map(u => {
+                        return <>{u} &nbsp;</>
+                    })}
+                </div>
             </div>
-            <div className={AnswerBoxRight} id={id2}>
-                <label>
-                    2
-                </label>
-                <label>
-                    {ans2}
-                </label>
+            <div className={UserBoxRight}>
+                <div className={AnswerBoxRight} id={id2}>
+                    <label>
+                        2
+                    </label>
+                    <label>
+                        {ans2}
+                    </label>
+                </div>
+                <div className={UserBoxFont}>
+                    {replyUser2.map(u => {
+                        return <>{u} &nbsp;</>
+                    })}
+                </div>
             </div>
-        </>
+        </div>
     )
 }

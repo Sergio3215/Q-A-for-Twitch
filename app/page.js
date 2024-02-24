@@ -5,13 +5,14 @@ import Background from '../Components/background';
 import StartText from '../Components/starText';
 import Question from '../Components/question';
 import { btnStart, containerDiv } from './page.module.css'
+import { QuestionContainer } from '../Components/styleComponent.module.css'
 
 const Tmi = require("tmi.js");
 
 const client = new Tmi.Client({
   options: {
     debug: true,
-    reconnect: true
+    // reconnect: true
   },
   identity: {
     username: process.env.NEXT_PUBLIC_user,
@@ -30,8 +31,6 @@ jsConfetti.addConfetti({
         confettiNumber: 200
       })
  */
-
-
 export default function Home() {
 
   const [preguntas, setPreguntas] = useState([]);
@@ -48,11 +47,7 @@ export default function Home() {
   const getQuestion = async () => {
     const ftch = await fetch('/api/preguntas');
     const response = await ftch.json();
-
-    // console.log(response.pregunta)
-
-    // setPreguntas(response.pregunta);
-
+    
     let qa = [];
     for (let ii = 0; ii < 5; ii++) {
       const numberData = response.pregunta.length - 1;
@@ -104,10 +99,10 @@ export default function Home() {
 
   const cleanLogManager = () => {
 
-    if (logg.length >= 12) {
+    if (logg.length > 9) {
       let lg = [];
-      logg.map((msg, ii)=>{
-        if(ii > 0){
+      logg.map((msg, ii) => {
+        if (ii > 0) {
           lg.push(msg);
         }
       });
@@ -201,7 +196,7 @@ export default function Home() {
     return () => {
       client.removeAllListeners('message')
     }
-  }, [users, rta, logg]);
+  }, [users, rta, logg, start]);
 
   useEffect(() => {
     console.log(client)
@@ -222,9 +217,10 @@ export default function Home() {
               </button>
             </div>
             :
-            <>
-              <Question question={preguntas} rta={rta} setLoggable={setLoggable} userReply={userReply}/>
-            </>
+            <div className={QuestionContainer}>
+              <Question question={preguntas} rta={rta} setLoggable={setLoggable} userReply={userReply} 
+              cleanLogManager={cleanLogManager}/>
+            </div>
         }
         <Logg event={logg} innerHeight={innerHeight} />
       </Background>

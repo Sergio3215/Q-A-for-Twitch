@@ -4,7 +4,7 @@ export default function Logg({ event, innerHeight }) {
 
     return (
         <div style={{
-            height: innerHeight 
+            // height: innerHeight 
         }} className={containerLogger}>
             {
                 event.map(
