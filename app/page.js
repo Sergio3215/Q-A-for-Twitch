@@ -4,14 +4,14 @@ import Logg from '../Components/logg';
 import Background from '../Components/background';
 import StartText from '../Components/starText';
 import Question from '../Components/question';
-import {btnStart, containerDiv} from './page.module.css'
+import { btnStart, containerDiv } from './page.module.css'
 
 const Tmi = require("tmi.js");
 
 const client = new Tmi.Client({
-  options: { 
-    debug: true, 
-    // reconnect: true 
+  options: {
+    debug: true,
+    reconnect: true
   },
   identity: {
     username: process.env.NEXT_PUBLIC_user,
@@ -39,18 +39,27 @@ export default function Home() {
   const [rta, setRta] = useState([]);
   const [load, setLoad] = useState([]);
   const [logg, setLogg] = useState([]);
-  const [image, setImage] = useState('');
   const [start, setStart] = useState(false);
-  const [win, setWin] = useState(false);
-  const [lose, setLose] = useState(false);
+  const [userReply, setUserReply] = useState("");
   const [disconnect, setDisconnected] = useState(false);
   const [innerHeight, setInnerHeight] = useState('');
 
 
   const getQuestion = async () => {
     const ftch = await fetch('/api/preguntas');
-    const data = await ftch.json();
-    setPreguntas(data);
+    const response = await ftch.json();
+
+    // console.log(response.pregunta)
+
+    // setPreguntas(response.pregunta);
+
+    let qa = [];
+    for (let ii = 0; ii < 5; ii++) {
+      const numberData = response.pregunta.length - 1;
+      const numberRandom = Math.floor(Math.random() * numberData);
+      qa.push(response.pregunta[numberRandom]);
+    }
+    setPreguntas(qa);
   }
 
   useEffect(() => {
@@ -58,13 +67,13 @@ export default function Home() {
     client.connect().catch((err) => { console.log(err.message) });
     setInnerHeight(window.innerHeight + "px");
 
-    if(localStorage.getItem("user") != null){
+    if (localStorage.getItem("user") != null) {
       let usrt1 = JSON.parse(localStorage.getItem("user")).data;
       setUsers(usrt1);
     }
 
-    
-    if(localStorage.getItem("logg") != null){
+
+    if (localStorage.getItem("logg") != null) {
       let lg = JSON.parse(localStorage.getItem("logg")).data;
       setLogg(lg);
     }
@@ -75,24 +84,41 @@ export default function Home() {
     }
   }, []);
 
-  const setLoggable = (msg)=>{
+  const setLoggable = (msg) => {
     let logging = logg;
     logging.push(msg);
     setLogg(logging);
   }
 
-  const sendMessageChat = (channel, msg)=>{
+  const sendMessageChat = (channel, msg) => {
     client.say(channel, msg);
   }
 
-  const systemManager = ()=>{
-    localStorage.setItem("user", JSON.stringify({data:users}));
-    localStorage.setItem("logg", JSON.stringify({data:logg}));
+  const systemManager = () => {
+    localStorage.setItem("user", JSON.stringify({ data: users }));
+    localStorage.setItem("logg", JSON.stringify({ data: logg }));
+
+    cleanLogManager();
 
   }
 
-  const MessageCommands = async (channel, userState, message, username)=>{
-    
+  const cleanLogManager = () => {
+
+    if (logg.length >= 12) {
+      let lg = [];
+      logg.map((msg, ii)=>{
+        if(ii > 0){
+          lg.push(msg);
+        }
+      });
+      setLogg(lg);
+      localStorage.setItem("logg", JSON.stringify({ data: lg }));
+    }
+
+  }
+
+  const MessageCommands = async (channel, userState, message, username) => {
+
     if (message.startsWith('!join')) {
       let usr = users;
       if (usr.filter(user => user == username).length == 0) {
@@ -103,8 +129,6 @@ export default function Home() {
         sendMessageChat(channel, `${username} se ha unido a la partida!`);
 
         setLoggable(`${username} se ha unido a la partida!`);
-
-        systemManager(users, logg);
       }
       else {
         sendMessageChat(channel, `${username} ya te has unido a la partida!`);
@@ -114,7 +138,7 @@ export default function Home() {
     }
 
 
-    if (message.startsWith('!unjoin')) {
+    if (message.startsWith('!left')) {
 
       let usr = users;
       if (usr.filter(user => user == username).length > 0) {
@@ -140,7 +164,7 @@ export default function Home() {
 
       let usr = users;
       if (usr.filter(user => user == username).length > 0) {
-        
+
         let cut = message.split('!rta');
         let word = '';
 
@@ -151,20 +175,23 @@ export default function Home() {
         setLoggable(`${username} ha respondido ${word}`);
 
         setRta(word);
+        setUserReply(username)
       }
       else {
         sendMessageChat(channel, `${username} no te has conectado a la partida! \nConectate usando el comando !join`);
       }
       setLoad(!load);
     }
+
+    systemManager();
   }
 
   useEffect(() => {
     client.on('message', async (channel, userState, message) => {
       const { username } = userState;
 
-      if(!username){
-        return ;
+      if (!username) {
+        return;
       }
 
       await MessageCommands(channel, userState, message, username);
@@ -176,26 +203,27 @@ export default function Home() {
     }
   }, [users, rta, logg]);
 
-  useEffect(()=>{
+  useEffect(() => {
     console.log(client)
     client.disconnect();
   }, [disconnect])
 
   return (
     <>
-      <Background start={start}>
+      <Background start={start} setLogg={setLogg} setUsers={setUsers} users={users}>
         {
           (!start) ?
             <div className={containerDiv}>
               <button className={btnStart} onClick={() => {
                 setStart(true);
+                getQuestion();
               }}>
                 <StartText />
               </button>
             </div>
             :
             <>
-              <Question />
+              <Question question={preguntas} rta={rta} setLoggable={setLoggable} userReply={userReply}/>
             </>
         }
         <Logg event={logg} innerHeight={innerHeight} />

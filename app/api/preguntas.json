@@ -1,283 +1,347 @@
 [
   {
     "pregunta": "¿Cuál es la capital de Francia?",
-    "respuesta": "París"
+    "respuesta_correcta": "París",
+    "respuestas_falsas": ["Madrid", "Londres", "Berlín"]
   },
   {
     "pregunta": "¿Cuál es el río más largo del mundo?",
-    "respuesta": "El Nilo"
+    "respuesta_correcta": "El Nilo",
+    "respuestas_falsas": ["El Amazonas", "El Mississippi", "El Yangtsé"]
   },
   {
     "pregunta": "¿Cuál es la montaña más alta del mundo?",
-    "respuesta": "El Monte Everest"
+    "respuesta_correcta": "El Monte Everest",
+    "respuestas_falsas": ["El Kilimanjaro", "El Aconcagua", "El K2"]
   },
   {
     "pregunta": "¿Cuál es el país más poblado del mundo?",
-    "respuesta": "China"
+    "respuesta_correcta": "China",
+    "respuestas_falsas": ["India", "Estados Unidos", "Rusia"]
   },
   {
     "pregunta": "¿Cuál es el país más pequeño del mundo?",
-    "respuesta": "Vaticano"
+    "respuesta_correcta": "Vaticano",
+    "respuestas_falsas": ["Mónaco", "Nauru", "San Marino"]
   },
   {
     "pregunta": "¿Cuál es el océano más grande del mundo?",
-    "respuesta": "El Océano Pacífico"
+    "respuesta_correcta": "El Océano Pacífico",
+    "respuestas_falsas": ["El Océano Atlántico", "El Océano Índico", "El Océano Antártico"]
   },
   {
     "pregunta": "¿Cuál es el desierto más grande del mundo?",
-    "respuesta": "El Sahara"
+    "respuesta_correcta": "El Sahara",
+    "respuestas_falsas": ["El Desierto del Gobi", "El Desierto de Kalahari", "El Desierto de Atacama"]
   },
   {
     "pregunta": "¿Cuál es el bosque más grande del mundo?",
-    "respuesta": "La Amazonía"
+    "respuesta_correcta": "La Amazonía",
+    "respuestas_falsas": ["El Bosque Boreal", "El Bosque del Congo", "El Bosque Valdiviano"]
   },
   {
     "pregunta": "¿Cuál es el animal más grande del mundo?",
-    "respuesta": "La ballena azul"
+    "respuesta_correcta": "La ballena azul",
+    "respuestas_falsas": ["El elefante africano", "El tiburón ballena", "El dinosaurio argentinosaurio"]
   },
   {
     "pregunta": "¿Cuál es el animal más pequeño del mundo?",
-    "respuesta": "La musaraña enana"
+    "respuesta_correcta": "La musaraña enana",
+    "respuestas_falsas": ["El colibrí abeja", "El escarabajo plumoso", "La araña saltarina"]
   },
   {
     "pregunta": "¿Cuál es el planeta más grande del Sistema Solar?",
-    "respuesta": "Júpiter"
+    "respuesta_correcta": "Júpiter",
+    "respuestas_falsas": ["Saturno", "Neptuno", "Urano"]
   },
   {
     "pregunta": "¿Cuál es el planeta más pequeño del Sistema Solar?",
-    "respuesta": "Mercurio"
+    "respuesta_correcta": "Mercurio",
+    "respuestas_falsas": ["Plutón", "Venus", "Marte"]
   },
   {
     "pregunta": "¿Cuál es el número pi?",
-    "respuesta": "3,1416"
+    "respuesta_correcta": "3,1416",
+    "respuestas_falsas": ["2,7182", "1,618", "4,6692"]
   },
   {
     "pregunta": "¿Cuál es la fórmula química del potasio?",
-    "respuesta": "K"
+    "respuesta_correcta": "K",
+    "respuestas_falsas": ["Fe", "Na", "Ca"]
   },
   {
     "pregunta": "¿Cuál es la fórmula química del magnesio?",
-    "respuesta": "Mg"
+    "respuesta_correcta": "Mg",
+    "respuestas_falsas": ["Mn", "Mo", "Cu"]
   },
   {
     "pregunta": "¿Cuál es la fórmula química del calcio?",
-    "respuesta": "Ca"
+    "respuesta_correcta": "Ca",
+    "respuestas_falsas": ["Cl", "Co", "Cd"]
   },
   {
     "pregunta": "¿Cuál es la fórmula química del radio?",
-    "respuesta": "Ra"
+    "respuesta_correcta": "Ra",
+    "respuestas_falsas": ["Rn", "Re", "Rh"]
   },
   {
     "pregunta": "¿En qué año se descubrió América?",
-    "respuesta": "1492."
+    "respuesta_correcta": "1492.",
+    "respuestas_falsas": ["1491", "1493", "1494"]
   },
   {
     "pregunta": "¿Cuál es la capital de Australia?",
-    "respuesta": "Camberra."
+    "respuesta_correcta": "Camberra.",
+    "respuestas_falsas": ["Sídney", "Melbourne", "Brisbane"]
   },
   {
     "pregunta": "¿Quién escribió 'Romeo y Julieta'?",
-    "respuesta": "William Shakespeare."
+    "respuesta_correcta": "William Shakespeare.",
+    "respuestas_falsas": ["Jane Austen", "Charles Dickens", "Leo Tolstoy"]
   },
   {
     "pregunta": "¿Cuál es el elemento más abundante en la corteza terrestre?",
-    "respuesta": "Oxígeno."
+    "respuesta_correcta": "Oxígeno.",
+    "respuestas_falsas": ["Hierro", "Silicio", "Aluminio"]
   },
   {
     "pregunta": "¿En qué año se celebró la primera Copa Mundial de la FIFA?",
-    "respuesta": "1930."
+    "respuesta_correcta": "1930.",
+    "respuestas_falsas": ["1928", "1932", "1934"]
   },
   {
     "pregunta": "¿Quién pintó la 'Mona Lisa'?",
-    "respuesta": "Leonardo da Vinci."
+    "respuesta_correcta": "Leonardo da Vinci.",
+    "respuestas_falsas": ["Pablo Picasso", "Vincent van Gogh", "Rembrandt"]
   },
   {
     "pregunta": "¿Cuál es el océano más grande del mundo?",
-    "respuesta": "Océano Pacífico."
+    "respuesta_correcta": "Océano Pacífico.",
+    "respuestas_falsas": ["Océano Atlántico.", "Océano Índico.", "Océano Antártico."]
   },
   {
     "pregunta": "¿Quién fue el primer presidente de Estados Unidos?",
-    "respuesta": "George Washington."
+    "respuesta_correcta": "George Washington.",
+    "respuestas_falsas": ["Thomas Jefferson.", "Abraham Lincoln.", "John F. Kennedy."]
   },
   {
     "pregunta": "¿Qué planeta es conocido como el 'Planeta Rojo'?",
-    "respuesta": "Marte."
-  },
-  {
-    "pregunta": "¿Quién fue el primer presidente de Estados Unidos?",
-    "respuesta": "George Washington"
+    "respuesta_correcta": "Marte.",
+    "respuestas_falsas": ["Venus.", "Júpiter.", "Saturno."]
   },
   {
     "pregunta": "¿En qué año comenzó la Primera Guerra Mundial?",
-    "respuesta": "1914"
+    "respuesta_correcta": "1914",
+    "respuestas_falsas": ["1905", "1920", "1939"]
   },
   {
     "pregunta": "¿Cuál fue la capital del Imperio Romano?",
-    "respuesta": "Roma"
+    "respuesta_correcta": "Roma",
+    "respuestas_falsas": ["Atenas", "Cartago", "Alejandría"]
   },
   {
     "pregunta": "¿Quién fue el líder de la Revolución Rusa de 1917?",
-    "respuesta": "Vladimir Lenin"
+    "respuesta_correcta": "Vladimir Lenin",
+    "respuestas_falsas": ["Joseph Stalin", "Leon Trotsky", "Alexander Kerensky"]
   },
   {
     "pregunta": "¿Qué evento marcó el inicio de la Revolución Francesa?",
-    "respuesta": "La Toma de la Bastilla"
+    "respuesta_correcta": "La Toma de la Bastilla",
+    "respuestas_falsas": ["La Marcha de las Mujeres a Versalles", "La Declaración de los Derechos del Hombre y del Ciudadano", "La Ejecución de Luis XVI"]
   },
   {
     "pregunta": "¿Cuál era el nombre del barco en el que Cristóbal Colón llegó a América en 1492?",
-    "respuesta": "La Santa María"
+    "respuesta_correcta": "La Santa María",
+    "respuestas_falsas": ["La Pinta", "La Niña", "La Victoria"]
   },
   {
     "pregunta": "¿En qué año terminó la Segunda Guerra Mundial?",
-    "respuesta": "1945"
+    "respuesta_correcta": "1945",
+    "respuestas_falsas": ["1943", "1947", "1950"]
   },
   {
     "pregunta": "¿Quién fue el líder de la independencia de la India en 1947?",
-    "respuesta": "Mahatma Gandhi"
+    "respuesta_correcta": "Mahatma Gandhi",
+    "respuestas_falsas": ["Jawaharlal Nehru", "Subhas Chandra Bose", "Muhammad Ali Jinnah"]
   },
   {
     "pregunta": "¿Qué imperio gobernó gran parte de Europa durante la Edad Media?",
-    "respuesta": "El Imperio Carolingio"
+    "respuesta_correcta": "El Imperio Carolingio",
+    "respuestas_falsas": ["El Imperio Romano", "El Imperio Otomano", "El Imperio Bizantino"]
   },
   {
     "pregunta": "¿Cuál fue la capital del Imperio Inca?",
-    "respuesta": "Cuzco"
+    "respuesta_correcta": "Cuzco",
+    "respuestas_falsas": ["Lima", "Quito", "Machu Picchu"]
   },
   {
     "pregunta": "¿Qué significa la sigla RGB en diseño?",
-    "respuesta": "Rojo, Verde y Azul"
+    "respuesta_correcta": "Rojo, Verde y Azul",
+    "respuestas_falsas": ["Rápido, Grueso, Bonito", "Revolución Gráfica Básica", "Realismo Gráfico Bidimensional"]
   },
   {
     "pregunta": "¿Cuál es el principio básico de la teoría del color?",
-    "respuesta": "La combinación de colores primarios para crear otros colores"
+    "respuesta_correcta": "La combinación de colores primarios para crear otros colores",
+    "respuestas_falsas": ["La teoría del color RGB", "El uso de colores complementarios", "La importancia del contraste en el diseño"]
   },
   {
     "pregunta": "¿Qué es la tipografía?",
-    "respuesta": "El arte y técnica en la letra"
+    "respuesta_correcta": "El arte y técnica en la letra",
+    "respuestas_falsas": ["El estudio de los jeroglíficos", "El diseño de logotipos", "La elaboración de carteles publicitarios"]
   },
   {
     "pregunta": "¿Qué es el diseño UX?",
-    "respuesta": "Experiencia de usuario"
+    "respuesta_correcta": "Experiencia de usuario",
+    "respuestas_falsas": ["Diseño de exteriores", "Diseño de uniformes", "Diseño de experimentos"]
   },
   {
     "pregunta": "¿Cuál es el propósito del diseño de empaques?",
-    "respuesta": "Proteger, contener y promocionar productos"
+    "respuesta_correcta": "Proteger, contener y promocionar productos",
+    "respuestas_falsas": ["Decorar espacios interiores", "Diseñar carteles publicitarios", "Crear logotipos corporativos"]
   },
   {
     "pregunta": "¿Qué es el diseño industrial?",
-    "respuesta": "El diseño de productos que se fabrican en serie"
+    "respuesta_correcta": "El diseño de productos que se fabrican en serie",
+    "respuestas_falsas": ["Diseño de moda", "Diseño de jardines", "Diseño de interiores"]
   },
   {
     "pregunta": "¿Cuál es el deporte más popular del mundo?",
-    "respuesta": "Fútbol"
+    "respuesta_correcta": "Fútbol",
+    "respuestas_falsas": ["Baloncesto", "Béisbol", "Tenis"]
   },
   {
     "pregunta": "¿En qué país se originó el fútbol moderno?",
-    "respuesta": "Inglaterra"
+    "respuesta_correcta": "Inglaterra",
+    "respuestas_falsas": ["Brasil", "Argentina", "Alemania"]
   },
   {
     "pregunta": "¿Cuántos jugadores conforman un equipo de fútbol en el campo?",
-    "respuesta": "11 jugadores"
+    "respuesta_correcta": "11 jugadores",
+    "respuestas_falsas": ["9 jugadores", "10 jugadores", "12 jugadores"]
   },
   {
     "pregunta": "¿Qué trofeo se otorga al campeón del Mundial de Fútbol?",
-    "respuesta": "La Copa del Mundo de la FIFA"
+    "respuesta_correcta": "La Copa del Mundo de la FIFA",
+    "respuestas_falsas": ["La Copa FIFA Confederaciones", "La Copa América", "La Copa UEFA"]
   },
   {
     "pregunta": "¿Qué jugador ha ganado más veces el premio Balón de Oro?",
-    "respuesta": "Lionel Messi"
+    "respuesta_correcta": "Lionel Messi",
+    "respuestas_falsas": ["Cristiano Ronaldo", "Diego Maradona", "Pelé"]
   },
   {
     "pregunta": "¿Qué equipo ganó la primera Copa Mundial de la FIFA en 1930?",
-    "respuesta": "Uruguay"
+    "respuesta_correcta": "Uruguay",
+    "respuestas_falsas": ["Brasil", "Argentina", "Italia"]
   },
   {
     "pregunta": "¿Qué equipo español es conocido como 'el equipo blanco'?",
-    "respuesta": "Real Madrid"
+    "respuesta_correcta": "Real Madrid",
+    "respuestas_falsas": ["FC Barcelona", "Atlético de Madrid", "Sevilla FC"]
   },
   {
     "pregunta": "¿Quién es el máximo goleador de la historia de la Liga de Campeones de la UEFA?",
-    "respuesta": "Cristiano Ronaldo"
+    "respuesta_correcta": "Cristiano Ronaldo",
+    "respuestas_falsas": ["Lionel Messi", "Raúl González", "Robert Lewandowski"]
   },
   {
     "pregunta": "¿Qué jugador es conocido como 'el Rey Pelé'?",
-    "respuesta": "Pelé, el legendario jugador brasileño"
+    "respuesta_correcta": "Pelé, el legendario jugador brasileño",
+    "respuestas_falsas": ["Diego Maradona", "Johan Cruyff", "Alfredo Di Stéfano"]
   },
   {
     "pregunta": "¿Qué país ganó la Copa Mundial de la FIFA 2018?",
-    "respuesta": "Francia"
+    "respuesta_correcta": "Francia",
+    "respuestas_falsas": ["Croacia", "Brasil", "Alemania"]
   },
   {
     "pregunta": "¿Qué utensilio se utiliza para revolver alimentos en una sartén?",
-    "respuesta": "La espátula"
+    "respuesta_correcta": "La espátula",
+    "respuestas_falsas": ["El cucharón", "El tenedor", "El batidor"]
   },
   {
     "pregunta": "¿Qué técnica de cocción se utiliza para cocinar alimentos en agua hirviendo?",
-    "respuesta": "Hervir"
+    "respuesta_correcta": "Hervir",
+    "respuestas_falsas": ["Asar", "Freír", "Sofreír"]
   },
   {
     "pregunta": "¿Cómo se llama el proceso de cocinar alimentos a fuego lento y a temperatura baja durante un largo periodo de tiempo?",
-    "respuesta": "Cocción lenta"
+    "respuesta_correcta": "Cocción lenta",
+    "respuestas_falsas": ["Asado", "Horneado", "Fritura"]
   },
   {
     "pregunta": "¿Qué utensilio se utiliza para medir ingredientes líquidos?",
-    "respuesta": "Jarra medidora"
+    "respuesta_correcta": "Jarra medidora",
+    "respuestas_falsas": ["Cuchara medidora", "Taza medidora", "Balanza"]
   },
   {
     "pregunta": "¿Qué se utiliza para dar sabor a los alimentos en la cocina?",
-    "respuesta": "Condimentos y especias"
+    "respuesta_correcta": "Condimentos y especias",
+    "respuestas_falsas": ["Hierbas aromáticas", "Aceites esenciales", "Vinagre y limón"]
   },
   {
     "pregunta": "¿Qué tipo de corte se utiliza para cortar en rodajas muy finas?",
-    "respuesta": "Corte en láminas"
+    "respuesta_correcta": "Corte en láminas",
+    "respuestas_falsas": ["Corte en cubos", "Corte en juliana", "Corte en dados"]
   },
   {
     "pregunta": "¿Qué ingrediente se utiliza para hacer pan?",
-    "respuesta": "Harina, levadura, agua, azucar y sal"
+    "respuesta_correcta": "Harina, levadura, agua, azucar y sal",
+    "respuestas_falsas": ["Arroz, aceite, leche y sal", "Maíz, manteca, leche y azúcar", "Avena, miel, leche y sal"]
   },
   {
     "pregunta": "¿Cuál es el plato típico italiano que se hace con capas de pasta, carne y salsa de tomate?",
-    "respuesta": "Lasaña"
+    "respuesta_correcta": "Lasaña",
+    "respuestas_falsas": ["Espaguetis a la boloñesa", "Raviolis", "Penne alla carbonara"]
   },
-  
   {
     "pregunta": "¿Qué significa la sigla 'RPM'?",
-    "respuesta": "Revoluciones Por Minuto"
+    "respuesta_correcta": "Revoluciones Por Minuto",
+    "respuestas_falsas": ["Rapidez Por Minuto", "Rotaciones Por Minuto", "Ritmo Por Minuto"]
   },
   {
     "pregunta": "¿Qué componente del automóvil se encarga de la ignición de la mezcla aire-combustible?",
-    "respuesta": "La bujía"
+    "respuesta_correcta": "La bujía",
+    "respuestas_falsas": ["La bobina de encendido", "El distribuidor", "El rotor"]
   },
   {
     "pregunta": "¿Qué sistema del automóvil es responsable de la suspensión y amortiguación?",
-    "respuesta": "El sistema de suspensión"
+    "respuesta_correcta": "El sistema de suspensión",
+    "respuestas_falsas": ["El sistema de dirección", "El sistema de frenos", "El sistema de escape"]
   },
   {
     "pregunta": "¿Cuál es la función del radiador?",
-    "respuesta": "disipar el calor "
+    "respuesta_correcta": "disipar el calor",
+    "respuestas_falsas": ["Generar electricidad", "Almacenar combustible", "Controlar la presión del aceite"]
   },
   {
     "pregunta": "¿Qué líquido se utiliza comúnmente en el sistema de frenos en un automóvil?",
-    "respuesta": "Líquido de frenos"
+    "respuesta_correcta": "Líquido de frenos",
+    "respuestas_falsas": ["Aceite de motor", "Agua destilada", "Anticongelante"]
   },
   {
     "pregunta": "¿Qué nombre recibe el componente que se encarga de distribuir la mezcla aire-combustible?",
-    "respuesta": "El carburador o inyector"
+    "respuesta_correcta": "El carburador o inyector",
+    "respuestas_falsas": ["El filtro de aire", "El regulador de presión de combustible", "El múltiple de admisión"]
   },
   {
     "pregunta": "¿Qué sistema del automóvil se encarga de convertir la energía mecánica del motor en energía cinética?",
-    "respuesta": "El sistema de transmisión"
+    "respuesta_correcta": "El sistema de transmisión",
+    "respuestas_falsas": ["El sistema de dirección", "El sistema de escape", "El sistema de frenos"]
   },
   {
     "pregunta": "¿Qué función tiene el alternador en un automóvil?",
-    "respuesta": "Cargar la batería y suministrar energía eléctrica al sistema del vehículo"
+    "respuesta_correcta": "Cargar la batería y suministrar energía eléctrica al sistema del vehículo",
+    "respuestas_falsas": ["Encender el motor", "Controlar la temperatura del motor", "Regular la presión de los neumáticos"]
   },
   {
     "pregunta": "¿Cuál es la unidad de medida de la potencia de un motor?",
-    "respuesta": "El caballo de fuerza (HP)"
+    "respuesta_correcta": "El caballo de fuerza (HP)",
+    "respuestas_falsas": ["El voltio (V)", "El vatio (W)", "El amperio (A)"]
   },
   {
     "pregunta": "¿Qué parte del automóvil es responsable de filtrar el polvo que ingresa al motor?",
-    "respuesta": "El filtro de aire"
+    "respuesta_correcta": "El filtro de aire",
+    "respuestas_falsas": ["El filtro de aceite", "El filtro de combustible", "El filtro de habitáculo"]
   }
 ]

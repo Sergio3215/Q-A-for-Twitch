@@ -4,12 +4,12 @@ export default function Logg({ event, innerHeight }) {
 
     return (
         <div style={{
-            height: innerHeight
+            height: innerHeight 
         }} className={containerLogger}>
             {
                 event.map(
-                    e => {
-                        return <div className={leterLogger}>
+                    (e, index) => {
+                        return <div className={leterLogger} key={index}>
                             <label>
                                 {e}
                             </label>
