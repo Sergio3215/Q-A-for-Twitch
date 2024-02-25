@@ -2,6 +2,8 @@ const { PrismaClient } = require('@prisma/client');
 
 const prisma = new PrismaClient();
 
+export const revalidate = 0;
+
 export async function POST(req) {
   const data = await req.json();
   // console.log(data);
@@ -14,22 +16,27 @@ export async function POST(req) {
 
   // console.log(nameFilter[0]);
 
-  const week = checkWeekDay(nameFilter[0].date);
-  // console.log(week);
+  try {
 
-  if (week) {
-    await prisma.user.update({
-      where: {
-        id: nameFilter[0].id
-      },
-      data: {
-        name: name,
-        point: point,
-        date: date
-      },
-    });
-    
-  return Response.json({ success: true, week: week });
+    const week = checkWeekDay(nameFilter[0].date);
+    // console.log(week);
+
+    if (week) {
+      await prisma.user.update({
+        where: {
+          id: nameFilter[0].id
+        },
+        data: {
+          name: name,
+          point: point,
+          date: date
+        },
+      });
+
+      return Response.json({ success: true, week: week });
+    }
+  } catch (error) {
+
   }
 
   allUsers = await prisma.user.findMany();
