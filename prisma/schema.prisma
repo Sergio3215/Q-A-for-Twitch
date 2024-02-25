@@ -11,5 +11,5 @@ model User {
   id   String @id @default(auto()) @map("_id") @db.ObjectId
   name String
   point Int
-  date DateTime
+  date String
 }

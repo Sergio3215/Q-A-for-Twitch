@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { AnswerBoxLeft, AnswerBoxRight, UserBoxLeft, UserBoxRight, AnswerContaintReply, UserBoxFont } from './styleComponent.module.css'
 
-export default function Answer({ stage, correct, incorrect, count, rta, setLoggable, userReply, cleanLogManager }) {
+export default function Answer({ stage, correct, incorrect, count, rta, setLoggable, userReply, cleanLogManager, resetMessage }) {
 
 
     // console.log(userReply)
@@ -14,6 +14,8 @@ export default function Answer({ stage, correct, incorrect, count, rta, setLogga
 
     const [replyUser1, setReplyUser1] = useState([]);
     const [replyUser2, setReplyUser2] = useState([]);
+
+    const [profile, setProfile] = useState([]);
 
 
     const reply = () => {
@@ -53,10 +55,8 @@ export default function Answer({ stage, correct, incorrect, count, rta, setLogga
             arrReplyUsers.push(userReply);
             setReplyUser2(arrReplyUsers);
         }
-        else {
-            setLoggable("La respuesta no coincide con las opciones 1 y 2");
-            cleanLogManager();
-        }
+
+        resetMessage();
     }
 
     useEffect(() => {
@@ -83,7 +83,9 @@ export default function Answer({ stage, correct, incorrect, count, rta, setLogga
             setId2("correct");
         }
 
-    }, [stage, correct, incorrect, userReply]);
+        // console.log(profile);
+
+    }, [stage, correct, incorrect]);
 
     useEffect(() => {
         if (count == 1) {
@@ -95,6 +97,17 @@ export default function Answer({ stage, correct, incorrect, count, rta, setLogga
                 document.getElementById("Incorrect").style.boxShadow = "1px 1px 60px 2px rgba(255, 44, 125, 0.851)";
             }
 
+            if (id1 == "correct") {
+                addPoint(replyUser1);
+            }
+
+            if (id2 == "correct") {
+                addPoint(replyUser2);
+            }
+
+            setReplyUser1([]);
+            setReplyUser2([]);
+
         }
         if (count == 30) {
             let arr = ["Incorrect", "correct"];
@@ -104,11 +117,68 @@ export default function Answer({ stage, correct, incorrect, count, rta, setLogga
                 if (document.getElementById(a) != null) {
                     document.getElementById(a).style.boxShadow = "1px 1px 60px 2px rgba(0,0,0,14%)"
                 }
-            })
+            });
+        }
+
+        if (stage == 4 && count == 0) {
+            sendDataDB();
         }
 
     }, [count]);
 
+    const checkNameProfile = (name) => {
+        return profile.filter(pf => pf.name == name).length > 0;
+    }
+
+    const updateProfile = (name) => {
+        let prof = profile;
+        profile.map(
+            (p, index) => {
+                if (p.name == name) {
+                    prof[index] = {
+                        name: p.name,
+                        point: p.point + 1,
+                        date: new Date()
+                    }
+                }
+            }
+        );
+
+        setProfile(prof);
+    }
+
+    const addPoint = (userProfile) => {
+        let prof = profile;
+
+        userProfile.map((up, ii) => {
+            let key = checkNameProfile(up);
+
+            if (key) {
+                updateProfile(up);
+            }
+            else {
+                prof.push({
+                    name: up,
+                    point: 1,
+                    date: new Date()
+                });
+            }
+        });
+
+        setProfile(prof);
+
+    }
+
+    const sendDataDB = () => {
+        //fetch('/api/addUser', {method:"POST",body: JSON.stringify({name:"jhon 1",point:1,date:new Date()})})
+        profile.map(async (prf) => {
+            await fetch('/api/addPoint',
+                {
+                    method: "POST",
+                    body: JSON.stringify(prf)
+                })
+        })
+    }
 
     return (
         <div className={AnswerContaintReply}>

@@ -4,7 +4,7 @@ import Logg from '../Components/logg';
 import Background from '../Components/background';
 import StartText from '../Components/starText';
 import Question from '../Components/question';
-import { btnStart, containerDiv } from './page.module.css'
+import { btnStart, containerDiv, CommandStyle } from './page.module.css'
 import { QuestionContainer } from '../Components/styleComponent.module.css'
 
 const Tmi = require("tmi.js");
@@ -47,7 +47,7 @@ export default function Home() {
   const getQuestion = async () => {
     const ftch = await fetch('/api/preguntas');
     const response = await ftch.json();
-    
+
     let qa = [];
     for (let ii = 0; ii < 5; ii++) {
       const numberData = response.pregunta.length - 1;
@@ -57,21 +57,24 @@ export default function Home() {
     setPreguntas(qa);
   }
 
-  useEffect(() => {
-    getQuestion();
-    client.connect().catch((err) => { console.log(err.message) });
-    setInnerHeight(window.innerHeight + "px");
-
+  const setDefaultLocalStorage = () => {
     if (localStorage.getItem("user") != null) {
       let usrt1 = JSON.parse(localStorage.getItem("user")).data;
       setUsers(usrt1);
     }
 
-
     if (localStorage.getItem("logg") != null) {
       let lg = JSON.parse(localStorage.getItem("logg")).data;
       setLogg(lg);
     }
+  }
+
+  useEffect(() => {
+    getQuestion();
+    setDefaultLocalStorage();
+
+    client.connect().catch((err) => { console.log(err.message) });
+    setInnerHeight(window.innerHeight + "px");
 
     return () => {
       setDisconnected(true);
@@ -89,16 +92,8 @@ export default function Home() {
     client.say(channel, msg);
   }
 
-  const systemManager = () => {
-    localStorage.setItem("user", JSON.stringify({ data: users }));
-    localStorage.setItem("logg", JSON.stringify({ data: logg }));
-
-    cleanLogManager();
-
-  }
 
   const cleanLogManager = () => {
-
     if (logg.length > 9) {
       let lg = [];
       logg.map((msg, ii) => {
@@ -109,15 +104,23 @@ export default function Home() {
       setLogg(lg);
       localStorage.setItem("logg", JSON.stringify({ data: lg }));
     }
+  }
+
+  const systemManager = () => {
+    localStorage.setItem("user", JSON.stringify({ data: users }));
+    localStorage.setItem("logg", JSON.stringify({ data: logg }));
+
+    cleanLogManager();
 
   }
 
-  const MessageCommands = async (channel, userState, message, username) => {
+  const MessageCommands = async (channel, message, username) => {
+
+    let usr = users,
+      usrNumber = usr.filter(user => user == username).length;
 
     if (message.startsWith('!join')) {
-      let usr = users;
-      if (usr.filter(user => user == username).length == 0) {
-
+      if (usrNumber == 0) {
         usr.push(username);
         setUsers(usr);
 
@@ -135,8 +138,7 @@ export default function Home() {
 
     if (message.startsWith('!left')) {
 
-      let usr = users;
-      if (usr.filter(user => user == username).length > 0) {
+      if (usrNumber > 0) {
         usr = [];
         users.map(u => {
           if (u != username) {
@@ -150,15 +152,14 @@ export default function Home() {
         setLoggable(`${username} se ha salido de la partida!`);
       }
       else {
-        client.say(channel, `${username} no te has conectado a la partida!`);
+        sendMessageChat(channel, `${username} no te has conectado a la partida!`);
       }
       setLoad(!load);
     }
 
     if (message.includes('!rta')) {
 
-      let usr = users;
-      if (usr.filter(user => user == username).length > 0) {
+      if (usrNumber > 0) {
 
         let cut = message.split('!rta');
         let word = '';
@@ -167,10 +168,16 @@ export default function Home() {
           word += msg;
         })
 
-        setLoggable(`${username} ha respondido ${word}`);
 
-        setRta(word);
-        setUserReply(username)
+        if ((word.includes('1') || word.includes('2')) && start) {
+          setLoggable(`${username} ha respondido ${word}`);
+          setRta(word);
+          setUserReply(username)
+        }
+        else {
+          setLoggable((start) ? "No ha ingresado una opcion esperable." : "No se ha iniciado el juego aun.");
+        }
+
       }
       else {
         sendMessageChat(channel, `${username} no te has conectado a la partida! \nConectate usando el comando !join`);
@@ -182,14 +189,14 @@ export default function Home() {
   }
 
   useEffect(() => {
-    client.on('message', async (channel, userState, message) => {
+    client.on('message', async (channel, userState, message, self) => {
       const { username } = userState;
 
       if (!username) {
         return;
       }
 
-      await MessageCommands(channel, userState, message, username);
+      await MessageCommands(channel, message, username);
 
     });
 
@@ -202,6 +209,11 @@ export default function Home() {
     console.log(client)
     client.disconnect();
   }, [disconnect])
+
+  const resetMessage = ()=>{
+    setUserReply("");
+    setRta("");
+  }
 
   return (
     <>
@@ -218,10 +230,19 @@ export default function Home() {
             </div>
             :
             <div className={QuestionContainer}>
-              <Question question={preguntas} rta={rta} setLoggable={setLoggable} userReply={userReply} 
-              cleanLogManager={cleanLogManager}/>
+              <Question question={preguntas} rta={rta} setLoggable={setLoggable} userReply={userReply}
+                cleanLogManager={cleanLogManager} resetMessage={resetMessage}/>
             </div>
         }
+        <div className={CommandStyle}>
+          <h1><u>Comando!</u></h1>
+          <br/>
+          <h2>!join</h2>
+          <br/>
+          <h2>!left</h2>
+          <br/>
+          <h2>!rta [numero] Ej: !rta 1</h2>
+        </div>
         <Logg event={logg} innerHeight={innerHeight} />
       </Background>
     </>

@@ -18,4 +18,11 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  position: relative;
+  left: -80px;
+}
+
+.CommandStyle{
+  position: relative;
+  left: 42px;
 }

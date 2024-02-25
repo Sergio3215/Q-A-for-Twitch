@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { questionHeader, questionHeaderLetter, questionBody, timer } from './styleComponent.module.css'
 import Answer from './answer';
 
-export default function Question({ question, rta, setLoggable, userReply, cleanLogManager }) {
+export default function Question({ question, rta, setLoggable, userReply, cleanLogManager, resetMessage }) {
 
 
     const [count, setCount] = useState(30);
@@ -55,6 +55,7 @@ export default function Question({ question, rta, setLoggable, userReply, cleanL
                 setLoggable={setLoggable}
                 userReply={userReply}
                 cleanLogManager={cleanLogManager}
+                resetMessage={resetMessage}
             />
         </>
     )
