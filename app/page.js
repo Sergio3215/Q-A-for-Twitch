@@ -314,7 +314,7 @@ export default function Home() {
 
                 <div className={containerDivTwitch}>
                   <button className={btnTwitch} onClick={() => {
-                    location.href = `https://id.twitch.tv/oauth2/authorize?response_type=code&client_id=a3y46q7wnm3gyn2rtorsryzvawep2p&redirect_uri=${location.origin}&scope=chat%3Aread+chat%3Aedit`;
+                    location.href = `https://id.twitch.tv/oauth2/authorize?response_type=code&client_id=${clientID_}&redirect_uri=${location.origin}&scope=chat%3Aread+chat%3Aedit`;
                   }}>
                     <LogoTwitch />
                     Login in Twitch
@@ -328,7 +328,7 @@ export default function Home() {
             </div>
         }
         <div className={CommandStyle}>
-          <h1><u>Comando</u></h1>
+          <h1><u>Comandos</u></h1>
           <br />
           <h2>!join: Para unirse</h2>
           <br />
