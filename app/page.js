@@ -328,13 +328,13 @@ export default function Home() {
             </div>
         }
         <div className={CommandStyle}>
-          <h1><u>Comando!</u></h1>
+          <h1><u>Comando</u></h1>
           <br />
-          <h2>!join</h2>
+          <h2>!join: Para unirse</h2>
           <br />
-          <h2>!left</h2>
+          <h2>!left: Para salirse</h2>
           <br />
-          <h2>!rta [numero] Ej: !rta 1</h2>
+          <h2>!rta [numero] : Para responder(Ej: !rta 1)</h2>
         </div>
         <Logg event={logg} innerHeight={innerHeight} />
       </Background>
