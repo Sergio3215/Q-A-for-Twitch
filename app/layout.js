@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import "../public/charlie-brown.svg"
 import "../public/Twitch Icon.svg"
+import "../public/jigsaw.svg"
 
 const inter = Inter({ subsets: ["latin"] });
 

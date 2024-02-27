@@ -1,66 +1,382 @@
-.btnStart {
-  border-left: 4px solid #3F7244;
-  border-right: 15px solid #3F7244;
-  border-top: 10px solid #3F7244;
-  border-bottom: 10px solid #3F7244;
-  border-radius: 50px;
-  background-color: #6BC174;
-  width: 494px;
-  height: 200px;
-  cursor: pointer;
+.CommandStyle {
+  max-height: 280px;
 }
 
-.containerDiv {
-  /* position: absolute; */
-  bottom: 40%;
-  left: 43.5%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  position: relative;
-  left: -80px;
+@media(min-width:1920px) {
+  .btnStart {
+    border-left: 4px solid #3F7244;
+    border-right: 15px solid #3F7244;
+    border-top: 10px solid #3F7244;
+    border-bottom: 10px solid #3F7244;
+    border-radius: 50px;
+    background-color: #6BC174;
+    width: 494px;
+    height: 200px;
+    cursor: pointer;
+  }
+
+  .containerDiv {
+    /* position: absolute; */
+    bottom: 40%;
+    left: 43.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    left: -80px;
+  }
+
+  .CommandStyle {
+    position: relative;
+    left: 42px;
+  }
+
+  .containerDivTwitch {
+    /* position: absolute; */
+    bottom: 40%;
+    left: 43.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    left: -80px;
+  }
+
+
+  .btnTwitch {
+    border-left: 4px solid #643f72;
+    border-right: 15px solid #643f72;
+    border-top: 10px solid #643f72;
+    border-bottom: 10px solid #643f72;
+    border-radius: 50px;
+    background-color: #9f6bc1;
+    width: 494px;
+    height: 200px;
+    cursor: pointer;
+    font-size: 3rem;
+    text-shadow: 1px 1px 15px rgb(5, 1, 105);
+  }
+
+  .twLogo {
+    position: relative;
+    top: 26px;
+    padding: 0px;
+    margin-top: -32px;
+  }
+
+  .btnTwitch:hover,
+  .btnStart:hover {
+    transform: scale(1.5);
+  }
 }
 
-.CommandStyle{
-  position: relative;
-  left: 42px;
+@media(max-width:1920px) {
+  .btnStart {
+    border-left: 4px solid #3F7244;
+    border-right: 15px solid #3F7244;
+    border-top: 10px solid #3F7244;
+    border-bottom: 10px solid #3F7244;
+    border-radius: 50px;
+    background-color: #6BC174;
+    width: 494px;
+    height: 200px;
+    cursor: pointer;
+  }
+
+  .containerDiv {
+    bottom: 40%;
+    left: 43.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    left: -80px;
+  }
+
+  .CommandStyle {
+    position: relative;
+    left: 42px;
+    font-size: 12px;
+    margin-right: 30px;
+  }
+
+  .containerDivTwitch {
+    /* position: absolute; */
+    bottom: 40%;
+    left: 43.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    left: -80px;
+  }
+
+
+  .btnTwitch {
+    border-left: 4px solid #643f72;
+    border-right: 15px solid #643f72;
+    border-top: 10px solid #643f72;
+    border-bottom: 10px solid #643f72;
+    border-radius: 50px;
+    background-color: #9f6bc1;
+    width: 494px;
+    height: 200px;
+    cursor: pointer;
+    font-size: 3rem;
+    text-shadow: 1px 1px 15px rgb(5, 1, 105);
+  }
+
+  .twLogo {
+    position: relative;
+    top: 26px;
+    padding: 0px;
+    margin-top: -32px;
+  }
+
+  .btnTwitch,
+  .btnStart {
+    transform: scale(0.6);
+  }
+
+  .btnTwitch:hover,
+  .btnStart:hover {
+    transform: scale(0.8);
+  }
 }
 
-.containerDivTwitch {
-  /* position: absolute; */
-  bottom: 40%;
-  left: 43.5%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  position: relative;
-  left: -80px;
+
+@media(max-width:1000px) {
+  .btnStart {
+    border-left: 4px solid #3F7244;
+    border-right: 15px solid #3F7244;
+    border-top: 10px solid #3F7244;
+    border-bottom: 10px solid #3F7244;
+    border-radius: 50px;
+    background-color: #6BC174;
+    width: 494px;
+    height: 200px;
+    cursor: pointer;
+  }
+
+  .containerDiv {
+    /* position: absolute; */
+    bottom: 40%;
+    left: 43.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    left: -80px;
+  }
+
+  .CommandStyle {
+    position: relative;
+    left: 42px;
+    font-size: 10.5px;
+  }
+
+  .containerDivTwitch {
+    /* position: absolute; */
+    bottom: 40%;
+    left: 43.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    left: -80px;
+  }
+
+
+  .btnTwitch {
+    border-left: 4px solid #643f72;
+    border-right: 15px solid #643f72;
+    border-top: 10px solid #643f72;
+    border-bottom: 10px solid #643f72;
+    border-radius: 50px;
+    background-color: #9f6bc1;
+    width: 494px;
+    height: 200px;
+    cursor: pointer;
+    font-size: 3rem;
+    text-shadow: 1px 1px 15px rgb(5, 1, 105);
+  }
+
+  .twLogo {
+    position: relative;
+    top: 26px;
+    padding: 0px;
+    margin-top: -32px;
+  }
+
+  .btnTwitch,
+  .btnStart {
+    position: relative;
+    right: 0vw;
+    top: 4vh;
+    transform: scale(0.4);
+  }
+
+  .btnTwitch:hover,
+  .btnStart:hover {
+    transform: scale(1.0);
+  }
 }
 
+@media(max-width:700px) {
+  .btnStart {
+    border-left: 4px solid #3F7244;
+    border-right: 15px solid #3F7244;
+    border-top: 10px solid #3F7244;
+    border-bottom: 10px solid #3F7244;
+    border-radius: 50px;
+    background-color: #6BC174;
+    width: 494px;
+    height: 200px;
+    cursor: pointer;
+  }
 
-.btnTwitch {
-  border-left: 4px solid #643f72;
-  border-right: 15px solid #643f72;
-  border-top: 10px solid #643f72;
-  border-bottom: 10px solid #643f72;
-  border-radius: 50px;
-  background-color: #9f6bc1;
-  width: 494px;
-  height: 200px;
-  cursor: pointer;
-  font-size: 3rem;
-  text-shadow: 1px 1px 15px rgb(5, 1, 105);
+  .containerDiv {
+    /* position: absolute; */
+    bottom: 40%;
+    left: 43.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    left: -80px;
+  }
+
+  .CommandStyle {
+    position: relative;
+    left: 0;
+  }
+
+  .containerDivTwitch {
+    /* position: absolute; */
+    bottom: 40%;
+    left: 43.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    left: -80px;
+  }
+
+
+  .btnTwitch {
+    border-left: 4px solid #643f72;
+    border-right: 15px solid #643f72;
+    border-top: 10px solid #643f72;
+    border-bottom: 10px solid #643f72;
+    border-radius: 50px;
+    background-color: #9f6bc1;
+    width: 494px;
+    height: 200px;
+    cursor: pointer;
+    font-size: 3rem;
+    text-shadow: 1px 1px 15px rgb(5, 1, 105);
+  }
+
+  .twLogo {
+    position: relative;
+    top: 26px;
+    padding: 0px;
+    margin-top: -32px;
+  }
+
+  .btnTwitch,
+  .btnStart {
+    position: relative;
+    right: 5%;
+    top: 45%;
+    transform: scale(0.4);
+    max-width: 400px;
+    min-width: 400px;
+  }
+
+  .btnTwitch:hover,
+  .btnStart:hover {
+    transform: scale(0.8);
+  }
 }
 
-.twLogo{
-  position: relative;
-  top: 26px;
-  padding: 0px;
-  margin-top: -32px;
-}
+@media(max-width:250px) {
+  .btnStart {
+    border-left: 4px solid #3F7244;
+    border-right: 15px solid #3F7244;
+    border-top: 10px solid #3F7244;
+    border-bottom: 10px solid #3F7244;
+    border-radius: 50px;
+    background-color: #6BC174;
+    width: 494px;
+    height: 200px;
+    cursor: pointer;
+  }
 
-.btnTwitch:hover, .btnStart:hover {
-  transform: scale(1.5);
+  .containerDiv {
+    /* position: absolute; */
+    bottom: 40%;
+    left: 43.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    left: -80px;
+  }
+
+  .CommandStyle {
+    position: relative;
+    left: 42px;
+  }
+
+  .containerDivTwitch {
+    /* position: absolute; */
+    bottom: 40%;
+    left: 43.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    left: -80px;
+  }
+
+
+  .btnTwitch {
+    border-left: 4px solid #643f72;
+    border-right: 15px solid #643f72;
+    border-top: 10px solid #643f72;
+    border-bottom: 10px solid #643f72;
+    border-radius: 50px;
+    background-color: #9f6bc1;
+    width: 494px;
+    height: 200px;
+    cursor: pointer;
+    font-size: 3rem;
+    text-shadow: 1px 1px 15px rgb(5, 1, 105);
+  }
+
+  .twLogo {
+    position: relative;
+    top: 26px;
+    padding: 0px;
+    margin-top: -32px;
+  }
+
+  .btnTwitch,
+  .btnStart {
+    position: relative;
+    right: 25vw;
+    top: 46vh;
+    transform: scale(0.3);
+  }
 }
