@@ -328,7 +328,7 @@ export default function Home() {
             </div>
         }
         <div className={CommandStyle}>
-          <h1><u>Comandos</u></h1>
+          <h1><u>Comandos </u></h1>
           <br />
           <h2>!join: Para unirse</h2>
           <br />
