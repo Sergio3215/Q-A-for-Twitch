@@ -26,3 +26,41 @@
   position: relative;
   left: 42px;
 }
+
+.containerDivTwitch {
+  /* position: absolute; */
+  bottom: 40%;
+  left: 43.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  left: -80px;
+}
+
+
+.btnTwitch {
+  border-left: 4px solid #643f72;
+  border-right: 15px solid #643f72;
+  border-top: 10px solid #643f72;
+  border-bottom: 10px solid #643f72;
+  border-radius: 50px;
+  background-color: #9f6bc1;
+  width: 494px;
+  height: 200px;
+  cursor: pointer;
+  font-size: 3rem;
+  text-shadow: 1px 1px 15px rgb(5, 1, 105);
+}
+
+.twLogo{
+  position: relative;
+  top: 26px;
+  padding: 0px;
+  margin-top: -32px;
+}
+
+.btnTwitch:hover, .btnStart:hover {
+  transform: scale(1.5);
+}

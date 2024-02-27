@@ -4,33 +4,17 @@ import Logg from '../Components/logg';
 import Background from '../Components/background';
 import StartText from '../Components/starText';
 import Question from '../Components/question';
-import { btnStart, containerDiv, CommandStyle } from './page.module.css'
+import { btnStart, containerDiv, CommandStyle, containerDivTwitch, btnTwitch } from './page.module.css'
 import { QuestionContainer } from '../Components/styleComponent.module.css'
+import LogoTwitch from '../Components/logoTwitch';
 
 const Tmi = require("tmi.js");
+let client;
 
-const client = new Tmi.Client({
-  options: {
-    debug: true,
-    // reconnect: true
-  },
-  identity: {
-    username: process.env.NEXT_PUBLIC_user,
-    password: process.env.NEXT_PUBLIC_Auth
-  },
-  channels: ['principiante_en_programar']
-});
+let clientID_ = process.env.NEXT_PUBLIC_ClientID;
+let secretID_ = process.env.NEXT_PUBLIC_SecretID;
 
-//Confeti
 
-/*
-const jsConfetti = new JSConfetti()
-
-jsConfetti.addConfetti({
-        emojis: ['🧦'],
-        confettiNumber: 200
-      })
- */
 export default function Home() {
 
   const [preguntas, setPreguntas] = useState([]);
@@ -39,6 +23,8 @@ export default function Home() {
   const [load, setLoad] = useState([]);
   const [logg, setLogg] = useState([]);
   const [start, setStart] = useState(false);
+  const [twitch, setTwitch] = useState(false);
+  const [broadcaster, setBroadcaster] = useState("");
   const [userReply, setUserReply] = useState("");
   const [disconnect, setDisconnected] = useState(false);
   const [innerHeight, setInnerHeight] = useState('');
@@ -69,17 +55,101 @@ export default function Home() {
     }
   }
 
-  useEffect(() => {
+  const connectChannel = () => {
     getQuestion();
-    setDefaultLocalStorage();
 
-    client.connect().catch((err) => { console.log(err.message) });
-    setInnerHeight(window.innerHeight + "px");
+    client.connect().catch((err) => {
+      // console.log(err.message) 
+    });
 
     return () => {
       setDisconnected(true);
       client.disconnect();
     }
+  }
+
+  const setOptionsChannels = (user, password) => {
+    client = new Tmi.Client({
+      options: {
+        debug: false,
+        reconnect: true
+      },
+      identity: {
+        username: user,
+        password: password
+      },
+      channels: [user]
+    });
+    connectChannel();
+    setTwitch(true);
+    setBroadcaster(user);
+  }
+
+  const getAccount = async (token) => {
+    await fetch('https://api.twitch.tv/helix/users',
+      {
+        headers: {
+          "Client-Id": clientID_,
+          "Authorization": `Bearer ${token}`
+        }
+      })
+      .then(res => res.json())
+      .then(obj => {
+        // console.log(obj.data)
+        let myObj = obj.data[0];
+        setOptionsChannels(myObj.login, token)
+      })
+  }
+
+  const ApiConnect = async () => {
+    let code = '';
+    let codeSessionStorage = '';
+    if (location.search != '') {
+      code = location.search.split("=")[1].split("&")[0]
+
+      if (sessionStorage.getItem("code") != null) {
+        codeSessionStorage = sessionStorage.getItem("code");
+        // connectChannel();
+      }
+    }
+
+    if (code != codeSessionStorage) {
+      sessionStorage.setItem("code", location.search.split("=")[1].split("&")[0]);
+
+      await fetch(`https://id.twitch.tv/oauth2/token?client_id=${clientID_}&client_secret=${secretID_}&code=${code}&grant_type=authorization_code&redirect_uri=${location.origin}`, {
+        method: "POST",
+      })
+        .then(res => res.json())
+        .then(data => {
+          // console.log(data)
+          if (data != undefined) {
+            getAccount(data.access_token);
+          }
+        })
+        .catch(err => {
+          //console.log(err.message)
+        });
+    }
+    else {
+      setTwitch(false);
+    }
+  }
+
+
+  useEffect(() => {
+
+    if (localStorage.getItem("load") == undefined) {
+      localStorage.setItem("load", true);
+      ApiConnect();
+    }
+    else {
+      localStorage.removeItem("load")
+    }
+
+    setDefaultLocalStorage();
+    setInnerHeight(window.innerHeight + "px");
+    // console.log(twitch);
+
   }, []);
 
   const setLoggable = (msg) => {
@@ -189,28 +259,38 @@ export default function Home() {
   }
 
   useEffect(() => {
-    client.on('message', async (channel, userState, message, self) => {
-      const { username } = userState;
 
-      if (!username) {
-        return;
+    try {
+      client.on('message', async (channel, userState, message, self) => {
+        const { username } = userState;
+
+        if (!username) {
+          return;
+        }
+
+        await MessageCommands(channel, message, username);
+
+      });
+
+      return () => {
+        client.removeAllListeners('message')
       }
+    } catch (error) {
 
-      await MessageCommands(channel, message, username);
-
-    });
-
-    return () => {
-      client.removeAllListeners('message')
     }
+
   }, [users, rta, logg, start]);
 
   useEffect(() => {
-    console.log(client)
-    client.disconnect();
+    try {
+      // console.log(client)
+      client.disconnect();
+    } catch (error) {
+
+    }
   }, [disconnect])
 
-  const resetMessage = ()=>{
+  const resetMessage = () => {
     setUserReply("");
     setRta("");
   }
@@ -220,27 +300,40 @@ export default function Home() {
       <Background start={start} setLogg={setLogg} setUsers={setUsers} users={users}>
         {
           (!start) ?
-            <div className={containerDiv}>
-              <button className={btnStart} onClick={() => {
-                setStart(true);
-                getQuestion();
-              }}>
-                <StartText />
-              </button>
-            </div>
+            (twitch) ?
+              <div className={containerDiv}>
+                <button className={btnStart} onClick={() => {
+                  setStart(true);
+                  getQuestion();
+                }}>
+                  <StartText />
+                </button>
+              </div>
+              :
+              <>
+
+                <div className={containerDivTwitch}>
+                  <button className={btnTwitch} onClick={() => {
+                    location.href = `https://id.twitch.tv/oauth2/authorize?response_type=code&client_id=a3y46q7wnm3gyn2rtorsryzvawep2p&redirect_uri=${location.origin}&scope=chat%3Aread+chat%3Aedit`;
+                  }}>
+                    <LogoTwitch />
+                    Login in Twitch
+                  </button>
+                </div>
+              </>
             :
             <div className={QuestionContainer}>
               <Question question={preguntas} rta={rta} setLoggable={setLoggable} userReply={userReply}
-                cleanLogManager={cleanLogManager} resetMessage={resetMessage}/>
+                cleanLogManager={cleanLogManager} resetMessage={resetMessage} broadcaster={broadcaster} />
             </div>
         }
         <div className={CommandStyle}>
           <h1><u>Comando!</u></h1>
-          <br/>
+          <br />
           <h2>!join</h2>
-          <br/>
+          <br />
           <h2>!left</h2>
-          <br/>
+          <br />
           <h2>!rta [numero] Ej: !rta 1</h2>
         </div>
         <Logg event={logg} innerHeight={innerHeight} />

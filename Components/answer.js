@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { AnswerBoxLeft, AnswerBoxRight, UserBoxLeft, UserBoxRight, AnswerContaintReply, UserBoxFont } from './styleComponent.module.css'
 
-export default function Answer({ stage, correct, incorrect, count, rta, setLoggable, userReply, cleanLogManager, resetMessage }) {
+export default function Answer({ stage, correct, incorrect, count, rta, setLoggable, userReply, cleanLogManager, resetMessage, broadcaster }) {
 
 
     // console.log(userReply)
@@ -172,11 +172,13 @@ export default function Answer({ stage, correct, incorrect, count, rta, setLogga
     const sendDataDB = () => {
         //fetch('/api/addUser', {method:"POST",body: JSON.stringify({name:"jhon 1",point:1,date:new Date()})})
         profile.map(async (prf) => {
-            await fetch('/api/addPoint',
-                {
-                    method: "POST",
-                    body: JSON.stringify(prf)
-                })
+            if(broadcaster == "principiante_en_programar"){
+                await fetch('/api/addPoint',
+                    {
+                        method: "POST",
+                        body: JSON.stringify(prf)
+                    })
+            }
         })
     }
 

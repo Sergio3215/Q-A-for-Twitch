@@ -100,11 +100,14 @@
     cursor: pointer;
     border-radius: 17px;
     font-weight: 700;
+    position: relative;
+    right: 16px;
 }
 
 .btnCustom:hover {
     background-color: #ffc267;
     color: #461485;
+    transform: scale(1.3);
 }
 
 .btnCustomContainers {
