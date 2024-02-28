@@ -11,6 +11,7 @@
 .colorBackgroundContainer {
     background-color: #5C77BD;
     background-image: url("/jigsaw.svg");
+    background-blend-mode: soft-light;
 }
 @media(min-width:1920px) {
     .imgBackgroundContainer {
@@ -38,7 +39,7 @@
         align-items: center;
         width: 100%;
         position: relative;
-        left: -95px;
+        left: -125px;
         min-height: 927px;
         max-height: 927px;
     }
@@ -157,9 +158,9 @@
 
     .AnswerBoxRight label:last-child,
     .AnswerBoxLeft label:last-child {
-        /* position: relative; */
+        position: relative;
         left: 5px;
-        top: 25px;
+        top: 15px;
         font-size: 18.5px;
     }
 

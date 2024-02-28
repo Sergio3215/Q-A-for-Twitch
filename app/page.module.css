@@ -2,7 +2,7 @@
   max-height: 280px;
 }
 
-@media(min-width:1920px) {
+@media(min-width:1919px) {
   .btnStart {
     border-left: 4px solid #3F7244;
     border-right: 15px solid #3F7244;
@@ -29,7 +29,10 @@
 
   .CommandStyle {
     position: relative;
-    left: 42px;
+    left: 22px;
+    font-size: 18px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
   }
 
   .containerDivTwitch {
@@ -72,7 +75,7 @@
   }
 }
 
-@media(max-width:1920px) {
+@media(max-width:1918px) {
   .btnStart {
     border-left: 4px solid #3F7244;
     border-right: 15px solid #3F7244;
