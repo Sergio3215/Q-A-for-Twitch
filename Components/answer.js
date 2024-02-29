@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import { AnswerBoxLeft, AnswerBoxRight, UserBoxLeft, UserBoxRight, AnswerContaintReply, UserBoxFont } from './styleComponent.module.css'
+import Ranking from './ranking';
 
-export default function Answer({ stage, correct, incorrect, count, rta, setLoggable, userReply, cleanLogManager, resetMessage, broadcaster }) {
+export default function Answer({ maxStage, stage, correct, incorrect, count, rta, setLoggable, userReply, cleanLogManager, resetMessage, broadcaster, setStart }) {
 
 
     // console.log(userReply)
@@ -16,6 +17,9 @@ export default function Answer({ stage, correct, incorrect, count, rta, setLogga
     const [replyUser2, setReplyUser2] = useState([]);
 
     const [profile, setProfile] = useState([]);
+
+
+    const [finish, setFinish] = useState(false);
 
 
     const reply = () => {
@@ -98,11 +102,17 @@ export default function Answer({ stage, correct, incorrect, count, rta, setLogga
             }
 
             if (id1 == "correct") {
-                addPoint(replyUser1);
+                addPoint(replyUser1, 1);
+            }
+            else{
+                addPoint(replyUser1, 0);
             }
 
             if (id2 == "correct") {
-                addPoint(replyUser2);
+                addPoint(replyUser2, 1);
+            }
+            else{
+                addPoint(replyUser2, 0);
             }
 
             setReplyUser1([]);
@@ -120,8 +130,9 @@ export default function Answer({ stage, correct, incorrect, count, rta, setLogga
             });
         }
 
-        if (stage == 4 && count == 0) {
+        if (stage == maxStage && count == 0) {
             sendDataDB();
+            setFinish(true);
         }
 
     }, [count]);
@@ -147,7 +158,7 @@ export default function Answer({ stage, correct, incorrect, count, rta, setLogga
         setProfile(prof);
     }
 
-    const addPoint = (userProfile) => {
+    const addPoint = (userProfile, pt) => {
         let prof = profile;
 
         userProfile.map((up, ii) => {
@@ -159,7 +170,7 @@ export default function Answer({ stage, correct, incorrect, count, rta, setLogga
             else {
                 prof.push({
                     name: up,
-                    point: 1,
+                    point: pt,
                     date: new Date()
                 });
             }
@@ -172,7 +183,7 @@ export default function Answer({ stage, correct, incorrect, count, rta, setLogga
     const sendDataDB = () => {
         //fetch('/api/addUser', {method:"POST",body: JSON.stringify({name:"jhon 1",point:1,date:new Date()})})
         profile.map(async (prf) => {
-            if(broadcaster == "principiante_en_programar"){
+            if (broadcaster == "principiante_en_programar") {
                 await fetch('/api/addPoint',
                     {
                         method: "POST",
@@ -182,38 +193,50 @@ export default function Answer({ stage, correct, incorrect, count, rta, setLogga
         })
     }
 
+    const gameRestart = ()=>{
+        setStart(false);
+    }
+
     return (
-        <div className={AnswerContaintReply}>
-            <div className={UserBoxLeft}>
-                <div className={AnswerBoxLeft} id={id1}>
-                    <label>
-                        1
-                    </label>
-                    <label>
-                        {ans1}
-                    </label>
+        <>
+            <div className={AnswerContaintReply}>
+                <div className={UserBoxLeft}>
+                    <div className={AnswerBoxLeft} id={id1}>
+                        <label>
+                            1
+                        </label>
+                        <label>
+                            {ans1}
+                        </label>
+                    </div>
+                    <div className={UserBoxFont}>
+                        {replyUser1.map(u => {
+                            return <>{u} &nbsp;</>
+                        })}
+                    </div>
                 </div>
-                <div className={UserBoxFont}>
-                    {replyUser1.map(u => {
-                        return <>{u} &nbsp;</>
-                    })}
+                <div className={UserBoxRight}>
+                    <div className={AnswerBoxRight} id={id2}>
+                        <label>
+                            2
+                        </label>
+                        <label>
+                            {ans2}
+                        </label>
+                    </div>
+                    <div className={UserBoxFont}>
+                        {replyUser2.map(u => {
+                            return <>{u} &nbsp;</>
+                        })}
+                    </div>
                 </div>
             </div>
-            <div className={UserBoxRight}>
-                <div className={AnswerBoxRight} id={id2}>
-                    <label>
-                        2
-                    </label>
-                    <label>
-                        {ans2}
-                    </label>
-                </div>
-                <div className={UserBoxFont}>
-                    {replyUser2.map(u => {
-                        return <>{u} &nbsp;</>
-                    })}
-                </div>
-            </div>
-        </div>
+            {
+                finish ?
+                    <Ranking profile={profile} finish={finish} gameRestart={gameRestart} />
+                    :
+                    <></>
+            }
+        </>
     )
 }

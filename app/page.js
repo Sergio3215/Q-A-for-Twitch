@@ -28,6 +28,7 @@ export default function Home() {
   const [userReply, setUserReply] = useState("");
   const [disconnect, setDisconnected] = useState(false);
   const [innerHeight, setInnerHeight] = useState('');
+  const [maxStage, setMaxStage] = useState(10);
 
 
   const getQuestion = async () => {
@@ -35,7 +36,7 @@ export default function Home() {
     const response = await ftch.json();
 
     let qa = [];
-    for (let ii = 0; ii < 5; ii++) {
+    for (let ii = 0; ii < maxStage; ii++) {
       const numberData = response.pregunta.length - 1;
       const numberRandom = Math.floor(Math.random() * numberData);
       qa.push(response.pregunta[numberRandom]);
@@ -55,12 +56,14 @@ export default function Home() {
     }
   }
 
-  const connectChannel = () => {
+  const connectChannel = async () => {
     getQuestion();
 
-    client.connect().catch((err) => {
-      // console.log(err.message) 
+    await client.connect().catch((err) => {
+      console.log(err.message) 
     });
+    
+    setTwitch(true);
 
     return () => {
       setDisconnected(true);
@@ -81,7 +84,6 @@ export default function Home() {
       channels: [user]
     });
     connectChannel();
-    setTwitch(true);
     setBroadcaster(user);
   }
 
@@ -97,7 +99,7 @@ export default function Home() {
       .then(obj => {
         // console.log(obj.data)
         let myObj = obj.data[0];
-        setOptionsChannels(myObj.login, token)
+        setOptionsChannels(myObj.login, "oauth:"+token)
       })
   }
 
@@ -144,6 +146,13 @@ export default function Home() {
     }
     else {
       localStorage.removeItem("load")
+    }
+
+    if(localStorage.getItem("maxQuestion") != undefined || localStorage.getItem("maxQuestion") != null){
+      setMaxStage(localStorage.getItem("maxQuestion"))
+    }
+    else{
+      localStorage.setItem("maxQuestion", maxStage)
     }
 
     setDefaultLocalStorage();
@@ -255,13 +264,31 @@ export default function Home() {
       setLoad(!load);
     }
 
+    if (message.startsWith('!quest')) {
+      try {
+
+        if (start) {
+          new Error("La partida esta empezada");
+        }
+        let num = parseInt(message.split('!quest')[1].trim());
+        setMaxStage(num);
+
+        sendMessageChat(channel, `${username} se ha establecido ${num} preguntas`);
+
+        localStorage.setItem('maxQuestion',num);
+
+      } catch (error) {
+        setLoggable(error.message);
+      }
+    }
+
     systemManager();
   }
 
   useEffect(() => {
 
     try {
-      client.on('message', async (channel, userState, message, self) => {
+      client.on('message', async (channel, userState, message) => {
         const { username } = userState;
 
         if (!username) {
@@ -279,7 +306,7 @@ export default function Home() {
 
     }
 
-  }, [users, rta, logg, start]);
+  }, [users, rta, logg, start, broadcaster, twitch, maxStage]);
 
   useEffect(() => {
     try {
@@ -324,7 +351,8 @@ export default function Home() {
             :
             <div className={QuestionContainer}>
               <Question question={preguntas} rta={rta} setLoggable={setLoggable} userReply={userReply}
-                cleanLogManager={cleanLogManager} resetMessage={resetMessage} broadcaster={broadcaster} />
+                cleanLogManager={cleanLogManager} resetMessage={resetMessage} broadcaster={broadcaster}
+                maxStage={maxStage} setStart={setStart} />
             </div>
         }
         <div className={CommandStyle}>
@@ -335,6 +363,8 @@ export default function Home() {
           <h2>!left: Para salirse</h2>
           <br />
           <h2>!rta [numero] : Para responder(Ej: !rta 1)</h2>
+          <br />
+          <h2>!quest [numero] : Para establecer un maximo de preguntas(Ej: !quest 1)</h2>
         </div>
         <Logg event={logg} innerHeight={innerHeight} />
       </Background>

@@ -13,6 +13,81 @@
     background-image: url("/jigsaw.svg");
     background-blend-mode: soft-light;
 }
+
+.RankingContainer {
+    position: absolute;
+    z-index: 9999;
+    border: 1px solid rgba(0, 0, 0, 53%);
+    background-color: rgba(0, 0, 0, 73%);
+    color: white;
+    width: 50vw;
+    height: 100vh;
+}
+
+.RankingContainer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
+}
+
+.RankingContainer div table {
+    white-space: nowrap;
+}
+
+.RankingContainer div table thead tr th {
+    background-color: #461485;
+    color: #fff5d2;
+    border: 2px solid #461485;
+    /* border-radius: 12px; */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.RankingContainer div table thead tr th:first-child {
+    border-top-right-radius: 0px;
+}
+
+.RankingContainer div table thead tr th:last-child {
+    border-top-left-radius: 0px;
+}
+
+.RankingContainer div table tbody {
+    background-color: #a266ec;
+    color: #fff5d2;
+}
+.RankingContainer div table tbody tr td {
+    padding:12px;
+}
+.RankingContainer div table tbody tr td:last-child {
+    border-bottom-right-radius: 10px;
+}
+.RankingContainer div table tbody tr td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+.RankingContainer div table thead tr th,
+.RankingContainer div table tbody tr td {
+    width: 120px;
+    text-align: center;
+}
+.btnReset {
+    border-left: 4px solid #3F7244;
+    border-right: 15px solid #3F7244;
+    border-top: 10px solid #3F7244;
+    border-bottom: 10px solid #3F7244;
+    border-radius: 30px;
+    background-color: #6BC174;
+    width: 294px;
+    height: 100px;
+    cursor: pointer;
+    font-size: 150%;
+  }
+  
+  .btnReset:hover {
+    transform: scale(1.2);
+  }
+
 @media(min-width:1920px) {
     .imgBackgroundContainer {
         width: 100%;

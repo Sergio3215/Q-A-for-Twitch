@@ -2,12 +2,11 @@ import { useEffect, useState } from 'react'
 import { questionHeader, questionHeaderLetter, questionBody, timer } from './styleComponent.module.css'
 import Answer from './answer';
 
-export default function Question({ question, rta, setLoggable, userReply, cleanLogManager, resetMessage, broadcaster }) {
+export default function Question({ maxStage, question, rta, setLoggable, userReply, cleanLogManager, resetMessage, broadcaster, setStart }) {
 
 
     const [count, setCount] = useState(30);
     const [stage, setStage] = useState(1);
-    const [maxStage, setMaxStage] = useState(4);
 
     useEffect(() => {
 
@@ -57,6 +56,8 @@ export default function Question({ question, rta, setLoggable, userReply, cleanL
                 cleanLogManager={cleanLogManager}
                 resetMessage={resetMessage}
                 broadcaster={broadcaster}
+                maxStage={maxStage}
+                setStart={setStart}
             />
         </>
     )
