@@ -268,17 +268,30 @@ export default function Home() {
       try {
 
         if (start) {
-          new Error("La partida esta empezada");
+          throw new Error("La partida esta empezada");
         }
         let num = parseInt(message.split('!quest')[1].trim());
+
+        let limite = 69
+
+        if(num > 70){
+          throw new Error(`Se ha alcanzado el limite, por favor elija entre 1 al ${limite}`);
+        }
+
+        if(num <= 0){
+          throw new Error(`El numero deseado no esta en el rango, por favor elija entre 1 al ${limite}`);
+        }
+
         setMaxStage(num);
 
         sendMessageChat(channel, `${username} se ha establecido ${num} preguntas`);
+        setLoggable(`${username} ha establecido ${num} pregunta${num ==1? "":"s"}`);
 
         localStorage.setItem('maxQuestion',num);
 
       } catch (error) {
         setLoggable(error.message);
+        sendMessageChat(channel, `${username} ${error.message}`);
       }
     }
 
