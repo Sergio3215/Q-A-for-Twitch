@@ -7,6 +7,9 @@ export default function Ranking({ profile, gameRestart }) {
 
             <div className={RankingContainer}>
                 <div>
+                Ranking de esta Partida
+                </div>
+                <div>
                     <table>
                         <thead>
                             <tr>

@@ -149,7 +149,7 @@ export default function Home() {
     }
 
     if(localStorage.getItem("maxQuestion") != undefined || localStorage.getItem("maxQuestion") != null){
-      setMaxStage(localStorage.getItem("maxQuestion"))
+      setMaxStage(parseInt(localStorage.getItem("maxQuestion")))
     }
     else{
       localStorage.setItem("maxQuestion", maxStage)
@@ -193,7 +193,7 @@ export default function Home() {
 
   }
 
-  const MessageCommands = async (channel, message, username) => {
+  const MessageCommands = async (channel, message, username, owner) => {
 
     let usr = users,
       usrNumber = usr.filter(user => user == username).length;
@@ -267,6 +267,10 @@ export default function Home() {
     if (message.startsWith('!quest')) {
       try {
 
+        if(!owner){
+          throw new Error("Solo el streamer puede cambiar el numero de preguntas!");
+        }
+
         if (start) {
           throw new Error("La partida esta empezada");
         }
@@ -282,10 +286,17 @@ export default function Home() {
           throw new Error(`El numero deseado no esta en el rango, por favor elija entre 1 al ${limite}`);
         }
 
+        if(isNaN(num)){
+          throw new Error("El valor es erroneo");
+        }
+
         setMaxStage(num);
 
         sendMessageChat(channel, `${username} se ha establecido ${num} preguntas`);
         setLoggable(`${username} ha establecido ${num} pregunta${num ==1? "":"s"}`);
+
+        
+        getQuestion();
 
         localStorage.setItem('maxQuestion',num);
 
@@ -302,13 +313,14 @@ export default function Home() {
 
     try {
       client.on('message', async (channel, userState, message) => {
-        const { username } = userState;
+        const { username, badges} = userState;
 
         if (!username) {
           return;
         }
 
-        await MessageCommands(channel, message, username);
+        let owner = badges.broadcaster != null
+        await MessageCommands(channel, message, username, owner);
 
       });
 

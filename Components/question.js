@@ -23,7 +23,7 @@ export default function Question({ maxStage, question, rta, setLoggable, userRep
                 }, 500);
             }
 
-            if (stage != 6 && !(c < 0)) {
+            if (stage != maxStage && !(c < 0)) {
                 setCount(c);
                 clearInterval(interval);
             }

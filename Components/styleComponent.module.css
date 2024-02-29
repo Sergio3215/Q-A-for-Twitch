@@ -17,18 +17,28 @@
 .RankingContainer {
     position: absolute;
     z-index: 9999;
-    border: 1px solid rgba(0, 0, 0, 53%);
-    background-color: rgba(0, 0, 0, 73%);
+    border: 1px solid rgb(0, 43, 113);
+    background-color: rgb(81, 7, 107);
     color: white;
-    width: 50vw;
-    height: 100vh;
+    border-radius: 20px;
+    top:15%;
+    width: 40vw;
+    height: 60vh;
 }
 
 .RankingContainer div {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20%;
+    margin-top: 10%;
+}
+
+.RankingContainer div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    font-size: 40px;
 }
 
 .RankingContainer div table {
@@ -72,12 +82,12 @@
     text-align: center;
 }
 .btnReset {
-    border-left: 4px solid #3F7244;
-    border-right: 15px solid #3F7244;
-    border-top: 10px solid #3F7244;
-    border-bottom: 10px solid #3F7244;
+    border-left: 4px solid #3f4372;
+    border-right: 15px solid #3f4372;
+    border-top: 10px solid #3f4372;
+    border-bottom: 10px solid #3f4372;
     border-radius: 30px;
-    background-color: #6BC174;
+    background-color: #716bc1;
     width: 294px;
     height: 100px;
     cursor: pointer;
@@ -236,7 +246,7 @@
         position: relative;
         left: 5px;
         top: 15px;
-        font-size: 18.5px;
+        font-size: 20px;
     }
 
     .AnswerBoxRight label:first-child,
