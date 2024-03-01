@@ -86,6 +86,11 @@ export default function Home() {
     });
     connectChannel();
     setBroadcaster(user);
+
+    if(location.search.includes("code=")){
+      location.href = location.origin;
+    }
+    
   }
 
   const getAccount = async (token) => {
@@ -101,6 +106,9 @@ export default function Home() {
         // console.log(obj.data)
         let myObj = obj.data[0];
         setOptionsChannels(myObj.login, "oauth:" + token)
+      })
+      .catch(err=>{
+        sessionStorage.removeItem("token");
       })
   }
 
@@ -126,11 +134,15 @@ export default function Home() {
         .then(data => {
           // console.log(data)
           if (data != undefined) {
+            sessionStorage.setItem("token", data.access_token);
             getAccount(data.access_token);
           }
         })
         .catch(err => {
-          //console.log(err.message)
+          sessionStorage.removeItem("token");
+          if(location.search.includes("code=")){
+            location.href = location.origin;
+          }
         });
     }
     else {
@@ -143,7 +155,12 @@ export default function Home() {
 
     if (localStorage.getItem("load") == undefined) {
       localStorage.setItem("load", true);
-      ApiConnect();
+      if(sessionStorage.getItem("token") == undefined) {
+        ApiConnect();
+      }
+      else{
+        getAccount(sessionStorage.getItem("token"));
+      }
     }
     else {
       localStorage.removeItem("load")
