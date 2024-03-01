@@ -20,10 +20,13 @@
     border: 1px solid rgb(0, 43, 113);
     background-color: rgb(81, 7, 107);
     color: white;
-    border-radius: 20px;
+    border-radius: 30px;
     top:15%;
-    width: 40vw;
-    height: 60vh;
+    padding: 80px;
+    padding-top: 40px;
+    padding-bottom: 35px;
+    /* width: 40vw;
+    height: 60vh; */
 }
 
 .RankingContainer div {
@@ -37,7 +40,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5%;
+    margin-top: 0;
     font-size: 40px;
 }
 
@@ -137,12 +140,12 @@
     }
 
     .containerLogger {
-        max-width: 248px;
+        /* max-width: 248px; */
         background-color: rgba(0, 0, 0, 13%);
-        max-width: 1rem;
+        /* max-width: 1rem;
         min-width: 16rem;
         max-height: 100vh;
-        min-height: 100vh;
+        min-height: 100vh; */
     }
 
     .timer {
@@ -327,12 +330,11 @@
     }
 
     .containerLogger {
-        max-width: 248px;
         background-color: rgba(0, 0, 0, 13%);
-        max-width: 1rem;
+        /* max-width: 1rem;
         min-width: 16rem;
         max-height: 100vh;
-        min-height: 100vh;
+        min-height: 100vh; */
     }
 
     .timer {
@@ -517,12 +519,11 @@
     }
 
     .containerLogger {
-        max-width: 248px;
         background-color: rgba(0, 0, 0, 13%);
-        max-width: 1rem;
+        /* max-width: 1rem;
         min-width: 6rem;
         max-height: 100vh;
-        min-height: 100vh;
+        min-height: 100vh; */
     }
 
     .timer {
@@ -671,8 +672,8 @@
 
 @media(max-width:700px) {
     .imgBackgroundContainer {
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
         background-size: 76px;
         display: flex;
         flex-direction: row-reverse;
@@ -680,8 +681,8 @@
     }
 
     .colorBackgroundContainer {
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
         display: flex;
         flex-direction: row-reverse;
         justify-content: flex-end;
@@ -707,12 +708,7 @@
     }
 
     .containerLogger {
-        max-width: 248px;
         background-color: rgba(0, 0, 0, 13%);
-        max-width: 1rem;
-        min-width: 6rem;
-        max-height: 100vh;
-        min-height: 100vh;
         display: none;
     }
 
@@ -859,5 +855,37 @@
         position: relative;
         bottom: 241px;
         gap: 42px;
+    }
+}
+
+/*Height*/
+@media(max-height:720px){
+    .leterLogger {
+        position: relative;
+        bottom: 20%;
+    }
+}
+@media(max-height:600px){
+    .leterLogger {
+        position: relative;
+        bottom: 55%;
+    }
+}
+@media(max-height:470px){
+    .leterLogger {
+        position: relative;
+        bottom: 100%;
+    }
+}
+@media(max-height:365px){
+    .leterLogger {
+        position: relative;
+        bottom: 170%;
+    }
+}
+@media(max-height:270px){
+    .leterLogger {
+        position: relative;
+        bottom: 240%;
     }
 }

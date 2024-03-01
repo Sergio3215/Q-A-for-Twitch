@@ -1,24 +1,35 @@
 import { useEffect, useState } from 'react';
-import { imgBackgroundContainer, colorBackgroundContainer, btnCustom,
-    btnCustomContainers } from './styleComponent.module.css';
+import {
+    imgBackgroundContainer, colorBackgroundContainer, btnCustom,
+    btnCustomContainers
+} from './styleComponent.module.css';
 
 export default function Background({ start, children, setLogg, setUsers, users }) {
 
     const [logg, setLogger] = useState(false);
     const [user, setUser] = useState(false);
+    const [heigth, setHeigth] = useState(false);
+    const [width, seWidth] = useState(false);
 
-    useEffect(()=>{
+    useEffect(() => {
         let usrs = localStorage.getItem('user') != null;
         setUser(usrs);
         let loggs = localStorage.getItem('logg') != null;
         setLogger(loggs);
-    })
+        
+        setHeigth(innerHeight);
+        seWidth(innerWidth);
+        window.addEventListener('resize', () => {
+            setHeigth(innerHeight);
+            seWidth(innerWidth);
+        });
+    });
 
     return (
         <>
             <div className={btnCustomContainers}>
                 {
-                   logg?
+                    logg ?
                         <button onClick={() => {
                             localStorage.removeItem('logg');
                             setLogger(false);
@@ -31,7 +42,7 @@ export default function Background({ start, children, setLogg, setUsers, users }
                 }
 
                 {
-                    users.length > 0?
+                    users.length > 0 ?
                         <button onClick={() => {
                             localStorage.removeItem('user');
                             setUser(false);
@@ -46,11 +57,17 @@ export default function Background({ start, children, setLogg, setUsers, users }
             {
                 (!start) ?
 
-                    <div className={imgBackgroundContainer}>
+                    <div className={imgBackgroundContainer} style={{
+                        height: heigth,
+                        width: width
+                    }}>
                         {children}
                     </div>
                     :
-                    <div className={colorBackgroundContainer}>
+                    <div className={colorBackgroundContainer} style={{
+                        height: heigth,
+                        width: width
+                    }}>
                         {children}
                     </div>
             }
