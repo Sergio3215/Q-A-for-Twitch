@@ -86,11 +86,12 @@ export default function Home() {
     });
     connectChannel();
     setBroadcaster(user);
+    setTwitch(true);
 
     if(location.search.includes("code=")){
       location.href = location.origin;
     }
-    
+
   }
 
   const getAccount = async (token) => {
