@@ -15,21 +15,22 @@
 
 .TriviaLetter{
   width: 100%;
-  font-family: var(--font-kode);
   text-align: center;
   /* position: relative;
   bottom: 70%; */
-  font-size: 64px;
   white-space: nowrap;
   overflow: hidden;
   border-right: 1px sollid #ffe3ba;
   animation: typing 2.5s steps(20);
 }
 .TriviaContainer u{
-  font-family: var(--font-kode);
-  font-size: 64px;
   animation: cursor .5s step-end infinite alternate;
   color:transparent;
+}
+
+.TriviaContainer u, .TriviaLetter{
+  font-family: var(--font-kode);
+  font-size: 64px;
 }
 
 @keyframes typing{
@@ -192,6 +193,10 @@
   .btnStart:hover {
     transform: scale(0.8);
   }
+  .TriviaContainer u, .TriviaLetter{
+    font-family: var(--font-kode);
+    font-size: 24px;
+  }
 }
 
 
@@ -351,6 +356,9 @@
   .btnTwitch:hover,
   .btnStart:hover {
     transform: scale(0.8);
+  }
+  .TriviaContainer{
+    bottom: -22%;
   }
 }
 
