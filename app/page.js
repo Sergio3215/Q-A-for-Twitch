@@ -166,6 +166,10 @@ export default function Home() {
     else {
       localStorage.removeItem("load")
     }
+    
+    if (localStorage.getItem("load") != undefined) {
+      localStorage.removeItem("load");
+    }
 
     if (localStorage.getItem("maxQuestion") != undefined || localStorage.getItem("maxQuestion") != null) {
       setMaxStage(parseInt(localStorage.getItem("maxQuestion")))
