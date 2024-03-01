@@ -11,7 +11,7 @@
   height: 10vh;
   position: relative;
   bottom: 20%;
-  text-shadow: 1px 1px 20px black;
+  text-shadow: 1px 1px 20px rgb(105, 89, 0);
 }
 
 .TriviaLetter{
