@@ -1,6 +1,6 @@
 .CommandStyle {
   max-height: 280px;
-  text-align: center;
+    text-align: center;
   background-color: rgba(0,0,0,0.4);
 }
 
@@ -180,7 +180,7 @@
   .CommandStyle {
     position: relative;
     left: 42px;
-    font-size: 10.5px;
+    font-size: 7.5px;
   }
 
   .containerDivTwitch {
