@@ -35,7 +35,7 @@ export default function Background({ start, children, setLogg, setUsers, users }
                             setLogger(false);
                             setLogg([])
                         }} className={btnCustom}>
-                            Clear Log
+                            Borrar Log
                         </button>
                         :
                         <></>
@@ -48,7 +48,7 @@ export default function Background({ start, children, setLogg, setUsers, users }
                             setUser(false);
                             setUsers([]);
                         }} className={btnCustom}>
-                            Clear all users
+                            Borrar todos los usuarios
                         </button>
                         :
                         <></>
