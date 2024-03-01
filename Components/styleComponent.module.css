@@ -8,6 +8,40 @@
     background-color: #31026f;
 }
 
+.containerLogger {
+    background-color: rgba(0, 0, 0, 13%);
+}
+
+.leterLogger {
+    color: #F3FBC1;
+    text-shadow: 1px 1px 1px black;
+}
+
+.AnswerBoxRight,
+.AnswerBoxLeft {
+    width: 300px;
+    height: 58px;
+    background-color: #ffe3ba;
+    border-radius: 17px;
+    color: #461485;
+    font-size: 16px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    box-shadow: 1px 1px 60px 2px #461485;
+    bottom: 25%;
+    border:1.5px solid #461485;
+    font-weight: 550;
+}
+
+.AnswerBoxRight label:first-child,
+.AnswerBoxLeft label:first-child {
+    border: 1.5px solid #461485;
+    background-color: #ffe3ba;
+    box-shadow: 1px 1px 60px 2px rgba(0, 0, 0, 14%);
+}
+
+
 .colorBackgroundContainer {
     background-color: #5C77BD;
     background-image: url("/jigsaw.svg");
@@ -21,7 +55,7 @@
     background-color: rgb(81, 7, 107);
     color: white;
     border-radius: 30px;
-    top:15%;
+    top: 15%;
     padding: 80px;
     padding-top: 40px;
     padding-bottom: 35px;
@@ -69,12 +103,15 @@
     background-color: #a266ec;
     color: #fff5d2;
 }
+
 .RankingContainer div table tbody tr td {
-    padding:12px;
+    padding: 12px;
 }
+
 .RankingContainer div table tbody tr td:last-child {
     border-bottom-right-radius: 10px;
 }
+
 .RankingContainer div table tbody tr td:first-child {
     border-bottom-left-radius: 10px;
 }
@@ -84,22 +121,28 @@
     width: 120px;
     text-align: center;
 }
+
 .btnReset {
     border-left: 4px solid #3f4372;
     border-right: 15px solid #3f4372;
     border-top: 10px solid #3f4372;
     border-bottom: 10px solid #3f4372;
-    border-radius: 30px;
     background-color: #716bc1;
+    border-radius: 30px;
     width: 294px;
     height: 100px;
     cursor: pointer;
     font-size: 150%;
-  }
-  
-  .btnReset:hover {
+}
+
+.btnReset:hover {
     transform: scale(1.2);
-  }
+}
+
+.timer {
+    color: #FCEDBA;
+    text-shadow: 1px 1px 12px black;
+}
 
 @media(min-width:1920px) {
     .imgBackgroundContainer {
@@ -133,27 +176,14 @@
     }
 
     .leterLogger {
-        color: #F3FBC1;
-        text-shadow: 1px 1px 1px black;
         padding: 20px 15px 20px 15px;
         /* animation: opacityLogg 5s linear ; */
-    }
-
-    .containerLogger {
-        /* max-width: 248px; */
-        background-color: rgba(0, 0, 0, 13%);
-        /* max-width: 1rem;
-        min-width: 16rem;
-        max-height: 100vh;
-        min-height: 100vh; */
     }
 
     .timer {
         /* position: absolute; */
         left: 53%;
         font-size: 128px;
-        color: #FCEDBA;
-        text-shadow: 1px 1px 12px black;
     }
 
     .questionHeader {
@@ -233,14 +263,11 @@
     .AnswerBoxLeft {
         width: 451px;
         height: 98px;
-        background-color: #D9D9D9;
         border-radius: 17px;
-        color: black;
         font-size: 20px;
         display: flex;
         justify-content: left;
         align-items: left;
-        box-shadow: 1px 1px 60px 2px rgba(0, 0, 0, 14%);
         bottom: 25%;
     }
 
@@ -257,8 +284,6 @@
         position: relative;
         bottom: 12px;
         right: 12px;
-        border: 1px solid #D9D9D9;
-        background-color: #D9D9D9;
         width: 110px;
         min-width: 110px;
         height: 120px;
@@ -266,7 +291,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 1px 1px 60px 2px rgba(0, 0, 0, 14%);
     }
 
     .UserBoxLeft {
@@ -423,14 +447,11 @@
     .AnswerBoxLeft {
         width: 300px;
         height: 58px;
-        background-color: #D9D9D9;
         border-radius: 17px;
-        color: black;
         font-size: 16px;
         display: flex;
         justify-content: left;
         align-items: left;
-        box-shadow: 1px 1px 60px 2px rgba(0, 0, 0, 14%);
         bottom: 25%;
     }
 
@@ -447,8 +468,6 @@
         position: relative;
         bottom: 12px;
         right: 12px;
-        border: 1px solid #D9D9D9;
-        background-color: #D9D9D9;
         width: 75px;
         min-width: 75px;
         height: 75px;
@@ -456,7 +475,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 1px 1px 60px 2px rgba(0, 0, 0, 14%);
     }
 
     .UserBoxLeft {
@@ -612,14 +630,11 @@
     .AnswerBoxLeft {
         width: 240px;
         height: 58px;
-        background-color: #D9D9D9;
         border-radius: 17px;
-        color: black;
         font-size: 16px;
         display: flex;
         justify-content: left;
         align-items: left;
-        box-shadow: 1px 1px 60px 2px rgba(0, 0, 0, 14%);
         bottom: 25%;
     }
 
@@ -636,8 +651,6 @@
         position: relative;
         bottom: 12px;
         right: 12px;
-        border: 1px solid #D9D9D9;
-        background-color: #D9D9D9;
         width: 75px;
         min-width: 75px;
         height: 75px;
@@ -645,7 +658,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 1px 1px 60px 2px rgba(0, 0, 0, 14%);
     }
 
     .UserBoxLeft {
@@ -800,14 +812,11 @@
         min-width: 150px;
         height: 60%;
         max-height: 78px;
-        background-color: #D9D9D9;
         border-radius: 17px;
-        color: black;
         font-size: 10px;
         display: flex;
         justify-content: left;
         align-items: left;
-        box-shadow: 1px 1px 60px 2px rgba(0, 0, 0, 14%);
         bottom: 25%;
     }
 
@@ -824,8 +833,6 @@
         position: relative;
         bottom: 12px;
         right: 12px;
-        border: 1px solid #D9D9D9;
-        background-color: #D9D9D9;
         width: 75px;
         min-width: 75px;
         height: 75px;
@@ -833,7 +840,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 1px 1px 60px 2px rgba(0, 0, 0, 14%);
     }
 
     .UserBoxLeft {
@@ -859,31 +865,35 @@
 }
 
 /*Height*/
-@media(max-height:720px){
+@media(max-height:720px) {
     .leterLogger {
         position: relative;
         bottom: 20%;
     }
 }
-@media(max-height:600px){
+
+@media(max-height:600px) {
     .leterLogger {
         position: relative;
         bottom: 55%;
     }
 }
-@media(max-height:470px){
+
+@media(max-height:470px) {
     .leterLogger {
         position: relative;
         bottom: 100%;
     }
 }
-@media(max-height:365px){
+
+@media(max-height:365px) {
     .leterLogger {
         position: relative;
         bottom: 170%;
     }
 }
-@media(max-height:270px){
+
+@media(max-height:270px) {
     .leterLogger {
         position: relative;
         bottom: 240%;
