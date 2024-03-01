@@ -23,7 +23,7 @@ export default function Background({ start, children, setLogg, setUsers, users }
             setHeigth(innerHeight);
             seWidth(innerWidth);
         });
-    });
+    },[]);
 
     return (
         <>
