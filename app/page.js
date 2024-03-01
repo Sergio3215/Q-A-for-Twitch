@@ -376,7 +376,7 @@ export default function Home() {
                     location.href = `https://id.twitch.tv/oauth2/authorize?response_type=code&client_id=${clientID_}&redirect_uri=${location.origin}&scope=chat%3Aread+chat%3Aedit`;
                   }}>
                     <LogoTwitch />
-                    Login in Twitch
+                    Logeate en Twitch
                   </button>
                 </div>
               </>
