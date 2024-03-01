@@ -4,9 +4,10 @@ import Logg from '../Components/logg';
 import Background from '../Components/background';
 import StartText from '../Components/starText';
 import Question from '../Components/question';
-import { btnStart, containerDiv, CommandStyle, containerDivTwitch, btnTwitch } from './page.module.css'
+import { btnStart, containerDiv, CommandStyle, containerDivTwitch, btnTwitch, TriviaLetter, TriviaContainer } from './page.module.css'
 import { QuestionContainer } from '../Components/styleComponent.module.css'
 import LogoTwitch from '../Components/logoTwitch';
+import TriviaText from '../Components/TitleTrivia';
 
 const Tmi = require("tmi.js");
 let client;
@@ -60,9 +61,9 @@ export default function Home() {
     getQuestion();
 
     await client.connect().catch((err) => {
-      console.log(err.message) 
+      console.log(err.message)
     });
-    
+
     setTwitch(true);
 
     return () => {
@@ -99,7 +100,7 @@ export default function Home() {
       .then(obj => {
         // console.log(obj.data)
         let myObj = obj.data[0];
-        setOptionsChannels(myObj.login, "oauth:"+token)
+        setOptionsChannels(myObj.login, "oauth:" + token)
       })
   }
 
@@ -148,10 +149,10 @@ export default function Home() {
       localStorage.removeItem("load")
     }
 
-    if(localStorage.getItem("maxQuestion") != undefined || localStorage.getItem("maxQuestion") != null){
+    if (localStorage.getItem("maxQuestion") != undefined || localStorage.getItem("maxQuestion") != null) {
       setMaxStage(parseInt(localStorage.getItem("maxQuestion")))
     }
-    else{
+    else {
       localStorage.setItem("maxQuestion", maxStage)
     }
 
@@ -267,7 +268,7 @@ export default function Home() {
     if (message.startsWith('!quest')) {
       try {
 
-        if(!owner){
+        if (!owner) {
           throw new Error("Solo el streamer puede cambiar el numero de preguntas!");
         }
 
@@ -278,27 +279,27 @@ export default function Home() {
 
         let limite = 69
 
-        if(num > 70){
+        if (num > 70) {
           throw new Error(`Se ha alcanzado el limite, por favor elija entre 1 al ${limite}`);
         }
 
-        if(num <= 0){
+        if (num <= 0) {
           throw new Error(`El numero deseado no esta en el rango, por favor elija entre 1 al ${limite}`);
         }
 
-        if(isNaN(num)){
+        if (isNaN(num)) {
           throw new Error("El valor es erroneo");
         }
 
         setMaxStage(num);
 
         sendMessageChat(channel, `${username} se ha establecido ${num} preguntas`);
-        setLoggable(`${username} ha establecido ${num} pregunta${num ==1? "":"s"}`);
+        setLoggable(`${username} ha establecido ${num} pregunta${num == 1 ? "" : "s"}`);
 
-        
+
         getQuestion();
 
-        localStorage.setItem('maxQuestion',num);
+        localStorage.setItem('maxQuestion', num);
 
       } catch (error) {
         setLoggable(error.message);
@@ -313,7 +314,7 @@ export default function Home() {
 
     try {
       client.on('message', async (channel, userState, message) => {
-        const { username, badges} = userState;
+        const { username, badges } = userState;
 
         if (!username) {
           return;
@@ -353,7 +354,10 @@ export default function Home() {
         {
           (!start) ?
             (twitch) ?
-              <div className={containerDiv}>
+              <div className={containerDiv} style={{
+                flexDirection: 'column',
+              }}>
+                <TriviaText />
                 <button className={btnStart} onClick={() => {
                   setStart(true);
                   getQuestion();
@@ -364,7 +368,10 @@ export default function Home() {
               :
               <>
 
-                <div className={containerDivTwitch}>
+                <div className={containerDivTwitch} style={{
+                  flexDirection: 'column',
+                }}>
+                  <TriviaText />
                   <button className={btnTwitch} onClick={() => {
                     location.href = `https://id.twitch.tv/oauth2/authorize?response_type=code&client_id=${clientID_}&redirect_uri=${location.origin}&scope=chat%3Aread+chat%3Aedit`;
                   }}>

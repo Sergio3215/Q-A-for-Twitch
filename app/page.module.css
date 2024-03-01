@@ -4,6 +4,49 @@
   background-color: rgba(0,0,0,0.4);
 }
 
+.TriviaContainer{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  height: 10vh;
+  position: relative;
+  bottom: 20%;
+}
+
+.TriviaLetter{
+  width: 100%;
+  font-family: var(--font-kode);
+  text-align: center;
+  /* position: relative;
+  bottom: 70%; */
+  font-size: 64px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 1px sollid #ffe3ba;
+  animation: typing 2.5s steps(20);
+}
+.TriviaContainer u{
+  font-family: var(--font-kode);
+  font-size: 64px;
+  animation: cursor .5s step-end infinite alternate;
+  color:transparent;
+}
+
+@keyframes typing{
+  0%{
+    width: 0;
+  }
+  50%{
+    width: 0;
+  }
+}
+
+@keyframes cursor{
+  50%{
+    color:white;
+  }
+}
+
 @media(min-width:1919px) {
   .btnStart {
     border-left: 4px solid #3F7244;
